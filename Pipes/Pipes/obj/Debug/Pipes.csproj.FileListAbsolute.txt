@@ -1,1 +1,9 @@
 C:\Users\Tsanko\Documents\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe.config
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe.config
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\bin\Debug\Pipes.pdb
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.csprojResolveAssemblyReference.cache
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.Properties.Resources.resources
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.csproj.GenerateResource.Cache
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.exe
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.pdb
