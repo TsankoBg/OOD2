@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Drawing;
+
 
 namespace Pipes
 {
     class Component
     {
-        Point x; 
+
+        PointP location;
         
-        public Component(Point loc)
+        public Component(PointP loc)
         {
-            x = loc;
+             location= loc;
         }  
 
 

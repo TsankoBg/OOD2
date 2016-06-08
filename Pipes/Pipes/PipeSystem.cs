@@ -59,11 +59,11 @@ namespace Pipes
         /// 
         /// </summary>
         /// <returns></returns>
-        public Point SelectedGriddSpace()
-        {
+        //public Point SelectedGriddSpace()
+        //{
    
-            return Point x;
-        }
+        //    return Point locaiton;
+        //}
 
         public void MOdifyComponent(int x)
         {

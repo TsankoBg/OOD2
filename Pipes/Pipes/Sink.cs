@@ -5,12 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Pipes
 {
     class Sink : Component
     {
-        public Sink(PointF loc) : base(loc)
+        public Sink(PointP loc) : base(loc)
         {
+            
         }
     }
 }

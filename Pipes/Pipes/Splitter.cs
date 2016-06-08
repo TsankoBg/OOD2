@@ -9,7 +9,7 @@ namespace Pipes
 {
     class Splitter : Component
     {
-        public Splitter(PointF loc) : base(loc)
+        public Splitter(PointP loc) : base(loc)
         {
         }
     }

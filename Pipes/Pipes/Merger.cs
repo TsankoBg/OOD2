@@ -9,7 +9,7 @@ namespace Pipes
 {
     class Merger : Component
     {
-        public Merger(PointF loc) : base(loc)
+        public Merger(PointP loc) : base(loc)
         {
         }
     }
