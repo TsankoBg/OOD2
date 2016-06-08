@@ -9,9 +9,9 @@ namespace Pipes
 {
     class Component
     {
-        PointF x; 
+        Point x; 
         
-        public Component(PointF loc)
+        public Component(Point loc)
         {
             x = loc;
         }  

@@ -9,7 +9,7 @@ namespace Pipes
 {
     class Pump : Component
     {
-        public Pump(PointF loc) : base(loc)
+        public Pump(Point loc) : base(loc)
         {
         }
     }

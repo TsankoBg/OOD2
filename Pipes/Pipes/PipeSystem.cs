@@ -55,11 +55,14 @@ namespace Pipes
         {
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public Point SelectedGriddSpace()
         {
    
-            return PointF x;
+            return Point x;
         }
     }
 }
