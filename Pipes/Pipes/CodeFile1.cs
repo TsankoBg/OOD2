@@ -1,1 +1,5 @@
-﻿enum Type { }
+﻿enum Type {
+Pipe,
+Splitter,
+Merger
+}

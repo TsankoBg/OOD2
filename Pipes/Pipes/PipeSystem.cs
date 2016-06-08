@@ -64,5 +64,14 @@ namespace Pipes
    
             return Point x;
         }
+
+        public void MOdifyComponent(int x)
+        {
+
+        }
+
+      
+
+
     }
 }
