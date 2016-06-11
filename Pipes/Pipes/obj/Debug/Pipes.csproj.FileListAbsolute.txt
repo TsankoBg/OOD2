@@ -7,3 +7,4 @@ C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.Properties.Res
 C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.csproj.GenerateResource.Cache
 C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.exe
 C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.pdb
+C:\Users\Tsanko\Documents\GitHub\OOD2\Pipes\Pipes\obj\Debug\Pipes.Form1.resources

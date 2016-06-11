@@ -9,6 +9,10 @@ namespace Pipes
 {
     class Splitter : Component
     {
+        Component inPutA { get; set; }
+        Component outPutA { get; set; }
+        Component outPutB { get; set; }
+
         public Splitter(PointP loc) : base(loc)
         {
         }

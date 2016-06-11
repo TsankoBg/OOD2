@@ -9,8 +9,52 @@ namespace Pipes
 {
     class Pump : Component
     {
+        Component OutPutA;
+        private int flow;
+        private int maxFlow;
+
+        public int Flow
+        {
+            get
+            {
+                return flow;
+            }
+            set
+            {
+                flow = value;
+            }
+        }
+        public int MaxFlow
+        {
+            get
+            {
+                return maxFlow;
+            }
+            set
+            {
+                maxFlow = value;
+            }
+        }
         public Pump(PointP loc) : base(loc)
         {
         }
+
+        /// <summary>
+        /// Sets the flow to the given value
+        /// </summary>
+        /// <param name="x"></param>
+        public void SetFlow(int x)
+        {
+            this.Flow = x;
+        }
+        /// <summary>
+        /// Sets the maxFlow  to the given value
+        /// </summary>
+        /// <param name="x"></param>
+        public void SetMaxFlow(int x)
+        {
+            this.MaxFlow = x;
+        }
+
     }
 }
