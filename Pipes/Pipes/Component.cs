@@ -46,6 +46,10 @@ namespace Pipes
             return -1;
         }
 
-
+        public Component AttachComponent()
+        {
+            Component c = new Component() ;
+            return c;
+        }
     }
 }

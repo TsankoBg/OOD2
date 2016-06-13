@@ -47,5 +47,6 @@ namespace Pipes
 
             this.SafetyLimit = limit;
         }
+
     }
 }

@@ -9,6 +9,7 @@ namespace Pipes
 {
     class Merger : Component
     {
+        
 
         Component inPutA { get; set; }
         Component inPutB { get; set; }
@@ -18,7 +19,7 @@ namespace Pipes
         // connstructor
         public Merger(PointP loc) : base(loc)
         {
-           
+         
         }
     }
 }
