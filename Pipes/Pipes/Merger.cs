@@ -17,9 +17,11 @@ namespace Pipes
 
 
         // connstructor
-        public Merger(PointP loc) : base(loc)
+        public Merger(PointP loc,Component inputa,Component inputb) : base(loc)
         {
-         
+            this.inPutA = inputa;
+            this.inPutB = inputb;
         }
+     
     }
 }
