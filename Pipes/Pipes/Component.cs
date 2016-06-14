@@ -13,6 +13,7 @@ namespace Pipes
     {
 
         PointP location;
+      public int Flow { get; set; }
         
         public Component(PointP loc)
         {
@@ -22,14 +23,7 @@ namespace Pipes
 
         // Methods
 
-            /// <summary>
-            /// removes the pipe
-            /// </summary>
-            /// <returns></returns>
-        public  bool removePipes()
-        {
-            return true;
-        }
+       
         /// <summary>
         /// Assignes the next component
         /// </summary>
@@ -41,13 +35,14 @@ namespace Pipes
         /// return the output flow as integer
         /// </summary>
         /// <returns></returns>
-        public int OutputFlow ()
-        {
-            return -1;
-        }
+        //public virtual int OutputFlow ()
+        //{
+        //    return -1;
+        //}
 
         public Component AttachComponent()
         {
+
             Component c = new Component() ;
             return c;
         }

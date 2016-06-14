@@ -56,12 +56,20 @@ namespace Pipes
 
         }
         /// <summary>
+        /// removes the pipe
+        /// </summary>
+        /// <returns></returns>
+        public bool removePipes()
+        {
+            return true;
+        }
+        /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
         //public Point SelectedGriddSpace()
         //{
-   
+
         //    return Point locaiton;
         //}
 
