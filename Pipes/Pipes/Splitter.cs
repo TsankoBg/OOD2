@@ -10,11 +10,28 @@ namespace Pipes
     class Splitter : Component
     {
         Component inPutA { get; set; }
-        Component outPutA { get; set; }
-        Component outPutB { get; set; }
+        Component OutputA { get; set; }
+        Component OutputB { get; set; }
+        public int Ratio { get; set; }
 
         public Splitter(PointP loc) : base(loc)
         {
+            Ratio = 50;
         }
+
+        public override void SetFlow(int x)
+        {
+            this.Flow = x;
+            if (OutputA != null) OutputA.SetFlow(Ratio*Flow);
+            if (OutputB != null) OutputB.SetFlow((100 - Ratio) * Flow);
+        }
+        public void ChangeRatio(int ratio)
+        {
+            Ratio = ratio;
+
+            if (OutputA != null) OutputA.SetFlow(Ratio * Flow);
+            if (OutputB != null) OutputB.SetFlow((100 - Ratio) * Flow);
+        }
+       
     }
 }

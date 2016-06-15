@@ -7,13 +7,26 @@ using System.Windows;
 using System.Drawing;
 
 
+
 namespace Pipes
 {
     class Component
     {
 
         PointP location;
-      public int Flow { get; set; }
+        private int flow;
+     public int Flow
+        {
+            get
+            {
+                return flow;
+
+            }
+            set
+            {
+                flow = value;
+            }
+        }
         
         public Component(PointP loc)
         {
@@ -40,11 +53,22 @@ namespace Pipes
         //    return -1;
         //}
 
-        public Component AttachComponent()
+        public void AttachComponent()
         {
 
-            Component c = new Component() ;
-            return c;
+         
+        }
+        public bool RemovePipes()
+        {
+
+
+
+            return false;
+
+        }
+        public virtual void SetFlow(int x)
+        {
+
         }
     }
 }

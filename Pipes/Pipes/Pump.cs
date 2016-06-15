@@ -9,21 +9,21 @@ namespace Pipes
 {
     class Pump : Component
     {
-        Component OutPutA;
-        private int flow;
+        Component OutputA;
+        //private int flow;
         private int maxFlow;
 
-        public int Flow
-        {
-            get
-            {
-                return flow;
-            }
-            set
-            {
-                flow = value;
-            }
-        }
+        //public int Flow
+        //{
+        //    get
+        //    {
+        //        return flow;
+        //    }
+        //    set
+        //    {
+        //        flow = value;
+        //    }
+        //}
         public int MaxFlow
         {
             get
@@ -43,9 +43,10 @@ namespace Pipes
         /// Sets the flow to the given value
         /// </summary>
         /// <param name="x"></param>
-        public void SetFlow(int x)
+        public override void SetFlow(int x)
         {
             this.Flow = x;
+            if (OutputA!=null) OutputA.SetFlow(Flow);
         }
         /// <summary>
         /// Sets the maxFlow  to the given value

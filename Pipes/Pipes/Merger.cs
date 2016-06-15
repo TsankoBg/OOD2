@@ -13,15 +13,23 @@ namespace Pipes
 
         Component inPutA { get; set; }
         Component inPutB { get; set; }
-        Component outPutA { get; set; }
+        Component OutputA { get; set; }
 
 
         // connstructor
-        public Merger(PointP loc,Component inputa,Component inputb) : base(loc)
+        public Merger(PointP loc) : base(loc)
         {
-            this.inPutA = inputa;
-            this.inPutB = inputb;
+            
         }
-     
+
+        public override void SetFlow(int x)
+        {
+             Flow = inPutA.Flow + inPutB.Flow;
+            
+            if (OutputA != null) OutputA.SetFlow(Flow);
+        }
+
+
+
     }
 }

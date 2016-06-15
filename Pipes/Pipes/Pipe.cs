@@ -10,8 +10,8 @@ namespace Pipes
     class Pipe : Component
     {
         // a pipe has an input and an output
-        Component inPutA { get; set; }
-        Component outPutA { get; set; }
+        Component InputA { get; set; }
+        Component OutputA { get; set; }
 
         private int safetyLimit;
         public int SafetyLimit
@@ -46,6 +46,11 @@ namespace Pipes
         {
 
             this.SafetyLimit = limit;
+        }
+        public override void SetFlow(int x)
+        {
+            this.Flow = x;
+            if (OutputA != null) OutputA.SetFlow(Flow);
         }
 
     }
