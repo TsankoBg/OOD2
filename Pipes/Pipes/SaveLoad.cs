@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Pipes
 {
@@ -37,10 +40,9 @@ namespace Pipes
                 BinaryFormatter bf = new BinaryFormatter();
                 using (FileStream s = new FileStream(filename, FileMode.OpenOrCreate))
                 {
-                    for (int i = 0; i < CompList.Count; i++)
-                    {
-                        bf.Serialize(s, CompList[i]);
-                    }
+                  
+                        bf.Serialize(s, CompList);
+                    
                     return true;
                 }
 
@@ -52,41 +54,10 @@ namespace Pipes
         {
             List<Component> tempList = null;
             BinaryFormatter bf = new BinaryFormatter();
-            Object ob = null;
-            Component comp = null;
             using (FileStream fs = new FileStream(filename, FileMode.Open))
             {
-                ob = bf.Deserialize(fs);
-                if (ob is Merger)
-                {
-                    comp = (Merger)ob;
-                    tempList.Add(comp);
-                }
-                else if (ob is Pipe)
-                {
-                    comp = (Pipe)ob;
-                    tempList.Add(comp);
-                }
-                else if (ob is Pump)
-                {
-                    comp = (Pump)ob;
-                    tempList.Add(comp);
-                }
-                else if (ob is Sink)
-                {
-                    comp = (Sink)ob;
-                    tempList.Add(comp);
-                }
-                else if (ob is Splitter)
-                {
-                    comp = (Splitter)ob;
-                    tempList.Add(comp);
-
-                }
-                else
-                {
-                    return null;
-                }
+                tempList = bf.Deserialize(fs);
+               
                 return tempList;
 
             }
@@ -109,4 +80,4 @@ namespace Pipes
         }
     }
 }
-}
+
