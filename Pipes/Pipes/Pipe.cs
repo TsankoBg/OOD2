@@ -14,7 +14,7 @@ namespace Pipes
         Component OutputA { get; set; }
 
         private int safetyLimit;
-        public int SafetyLimit
+        private int SafetyLimit
         {
             get
             {

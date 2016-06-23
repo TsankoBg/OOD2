@@ -65,5 +65,23 @@ namespace Pipes
                 system.saveload.load();
             }
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            foreach (Component c in system.Components)
+            {
+            if (c is Merger)
+                {
+                  //  toolStripMenuItem1.HideDropDown();
+                    toolStripMenuItem1.Visible = false;
+                }
+
+            }
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace Pipes
 
         PointP location;
         private int flow;
-     public int Flow
+        public int Flow
         {
             get
             {
