@@ -9,12 +9,17 @@ namespace Pipes
 {
     class PipeSystem
     {
-        
-        private int currentXsize;
-        private int currentYsize;
-        private bool alterSinceSave;
-        Component selectedComponent;
-        List<Component> Components;
+
+        private int currentXsize = 10;
+        private int currentYsize = 10;
+        private bool alterSinceSave = false;
+        public Component selectedComponent;
+        public List<Component> Components;
+        public SaveLoad saveload;
+        public Grid grid;
+        public delegate void ShowSaveButton(bool ShowifSaved);
+        public event ShowSaveButton showsave;
+
 
         public int CurrentXsize
         {
@@ -47,6 +52,13 @@ namespace Pipes
             set
             {
                 alterSinceSave = value;
+                if(alterSinceSave == false)
+                {
+                    if(showsave != null)
+                    {
+                        showsave(alterSinceSave);
+                    }
+                }
             }
         }
 
@@ -77,6 +89,7 @@ namespace Pipes
         {
 
         }
+        
 
      
 

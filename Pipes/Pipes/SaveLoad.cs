@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Pipes
 {
     class SaveLoad
@@ -56,7 +57,7 @@ namespace Pipes
             BinaryFormatter bf = new BinaryFormatter();
             using (FileStream fs = new FileStream(filename, FileMode.Open))
             {
-                tempList = bf.Deserialize(fs);
+                tempList = (List<Component>)bf.Deserialize(fs);
                
                 return tempList;
 
