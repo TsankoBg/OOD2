@@ -11,14 +11,14 @@ namespace Pipes
     class Grid
     {
         Panel panel;
-        PointP xy;
+        PointP xy = new PointP();
         float height;
         float width;
         float xSpace;
         float ySpace;
         Graphics graph;
         public int lines { get; set; }
-        Pen pen = new Pen(Brushes.Transparent);
+        Pen pen = new Pen(Brushes.Black);
 
         public Grid(Panel pan, int NumberOfLines)
         {
@@ -27,8 +27,9 @@ namespace Pipes
             this.xy.Y = 0f;
             this.height = pan.Height;
             this.width = pan.Width;
-            graph = pan.CreateGraphics();
+            graph = panel.CreateGraphics();
             this.lines = NumberOfLines;
+            drawGrid(lines);
 
         }
         void drawGrid(int NumberOfLines)

@@ -15,3 +15,5 @@ C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.csprojResolveAssem
 C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.Form1.resources
 C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.Properties.Resources.resources
 C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.csproj.GenerateResource.Cache
+C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe
+C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.pdb

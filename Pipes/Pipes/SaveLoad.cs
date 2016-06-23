@@ -14,70 +14,103 @@ namespace Pipes
     {
 
         public string filename { get; set; }
-        public SaveLoad()
+      
+        public void save(List<Component> CompList)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "bin|*.bin";
-            if (ofd.ShowDialog() == DialogResult.OK)
+            if (filename == null)
             {
-                filename = ofd.FileName;
+                int name = updateFileName();
+                //see UpdateFileName Method for explaination
+                if (name == 1)
+                {
+                    return;
+                }
+                else if (name == 2)
+                {
+                    save(CompList);
+                }
+                else
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    using (FileStream s = new FileStream(filename, FileMode.OpenOrCreate))
+                    {
+                        bf.Serialize(s, CompList);
+                    }
+                }
             }
             else
-            {
-                bool b = updateFileName();
-                while (!b)
-                {
-                    b = updateFileName();
-                };
-
-            }
-
-        }
-        public bool save(List<Component> CompList)
-        {
-            if (filename != null)
-            {
-
+            { 
                 BinaryFormatter bf = new BinaryFormatter();
                 using (FileStream s = new FileStream(filename, FileMode.OpenOrCreate))
                 {
-                  
-                        bf.Serialize(s, CompList);
-                    
-                    return true;
+                    bf.Serialize(s, CompList);
                 }
-
             }
-            return false;
         }
 
         public List<Component> load()
         {
-            List<Component> tempList = null;
-            BinaryFormatter bf = new BinaryFormatter();
-            using (FileStream fs = new FileStream(filename, FileMode.Open))
+            if (filename == null)
             {
-                tempList = (List<Component>)bf.Deserialize(fs);
-               
-                return tempList;
-
+                int name = updateFileName();
+                if (name == 1)
+                {
+                    return null;
+                }
+                else if (name == 2)
+                {
+                   return load();
+                }
+                else
+                {
+                    List<Component> tempList = null;
+                    BinaryFormatter bf = new BinaryFormatter();
+                    using (FileStream fs = new FileStream(filename, FileMode.Open))
+                    {
+                        tempList = (List<Component>)bf.Deserialize(fs);
+                    }
+                    return tempList;
+                }
             }
+            else
+            {
+                List<Component> tempList = null;
+                BinaryFormatter bf = new BinaryFormatter();
+                using (FileStream fs = new FileStream(filename, FileMode.Open))
+                {
+                    tempList = (List<Component>)bf.Deserialize(fs);
+                }
+                return tempList;
+            }
+          
 
         }
-        public bool updateFileName()
+        public int updateFileName()
         {
 
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "bin|*.bin";
-            if (ofd.ShowDialog() == DialogResult.OK)
+            DialogResult r = ofd.ShowDialog();
+            if (r == DialogResult.OK)
             {
+                //If results are ok returns 0 which will proceed to work with filename
                 filename = ofd.FileName;
-                return true;
+                return 0;
+                
+            }
+            else if(r == DialogResult.Cancel)
+            {
+                //if user cancels will exit Open dialog 
+                return 1;
             }
             else
             {
-                return false;
+                //selected wrong file or anything else,
+                //Another Open File Dialog will appear 
+                //until user selects the right file or hits cancel
+                return 2;
             }
+            
         }
     }
 }

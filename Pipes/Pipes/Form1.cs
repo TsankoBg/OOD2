@@ -13,16 +13,16 @@ namespace Pipes
     public partial class Form1 : Form
     {
         PipeSystem system = new PipeSystem();
-       
+        
 
         public Form1()
         {
             InitializeComponent();
             system.grid = new Grid(this.GridPanel, system.CurrentXsize);
             system.showsave += allowSave;
+            system.saveload = new SaveLoad();
             //When the SaveSinceLast is at anypoint turned to false,
             //an event will rise not allowing the Save Button to be clicked
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -32,19 +32,12 @@ namespace Pipes
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            
-            if (system.saveload == null)
-            {
-                system.saveload = new SaveLoad();
-            }
-            else
-            {
-                system.saveload.updateFileName();
-            }
+
+            system.saveload.save(system.Components);
         }
         void allowSave(bool showSave)
         {
-            if(showSave == false)
+            if (showSave == false)
             {
                 SaveButton.Enabled = false;
             }
@@ -56,21 +49,21 @@ namespace Pipes
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
-            if(system.AlterSinceSave == false)
-            {
-                DialogResult result = new DialogResult;
-                result = MessageBox.Show("Warning, If")
-                    if)result == DialogResult.OK){
-
+            if (system.AlterSinceSave == false)
+            { 
+                DialogResult result = new DialogResult();
+                result = MessageBox.Show(this, "Warning, If you load current data will be overwritten", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    
+                        system.saveload.load();
                 }
-             
-
-                }
+            }
             else
             {
+                
                 system.saveload.load();
             }
-            
         }
     }
 }
