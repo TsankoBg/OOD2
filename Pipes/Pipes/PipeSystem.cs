@@ -71,10 +71,11 @@ namespace Pipes
         }
 
         // Methods
-        public void addComponent(Type y, PointP x)
+        public void addComponent( Component x)
         {
-            Components = new List<Component>();
-            Components.Add(new Component(x));
+           // Components = new List<Component>();
+            Components.Add(x);
+           
         }
         /// <summary>
         /// removes the pipe

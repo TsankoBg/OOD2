@@ -68,7 +68,15 @@ namespace Pipes
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+                {
+                    // parameter neeed to be assignet 
+                    c.AttachComponent(system.selectedComponent);
+                }
+            }
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -145,6 +153,36 @@ namespace Pipes
                     system.MOdifyComponent(23);
                 }
             }
+        }
+
+        private void BtnAddpipe_Click(object sender, EventArgs e)
+        {
+            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            system.addComponent(new Pipe(p));
+        }
+
+        private void BtnSplitter_Click(object sender, EventArgs e)
+        {
+            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            system.addComponent(new Splitter(p));
+        }
+
+        private void BtnMerger_Click(object sender, EventArgs e)
+        {
+            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            system.addComponent(new Merger(p));
+        }
+
+        private void BtnPump_Click(object sender, EventArgs e)
+        {
+            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            system.addComponent(new Pump(p));
+        }
+
+        private void BtnSink_Click(object sender, EventArgs e)
+        {
+            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            system.addComponent(new Sink(p));
         }
     }
 }

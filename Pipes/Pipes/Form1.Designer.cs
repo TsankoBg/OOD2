@@ -41,6 +41,11 @@
             this.RightClickOutputB = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickChange = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnAddpipe = new System.Windows.Forms.Button();
+            this.BtnSplitter = new System.Windows.Forms.Button();
+            this.BtnMerger = new System.Windows.Forms.Button();
+            this.BtnPump = new System.Windows.Forms.Button();
+            this.BtnSink = new System.Windows.Forms.Button();
             this.ToolPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +53,11 @@
             // ToolPanel
             // 
             this.ToolPanel.BackColor = System.Drawing.Color.MintCream;
+            this.ToolPanel.Controls.Add(this.BtnSink);
+            this.ToolPanel.Controls.Add(this.BtnPump);
+            this.ToolPanel.Controls.Add(this.BtnMerger);
+            this.ToolPanel.Controls.Add(this.BtnSplitter);
+            this.ToolPanel.Controls.Add(this.BtnAddpipe);
             this.ToolPanel.Controls.Add(this.SaveButton);
             this.ToolPanel.Controls.Add(this.LoadButton);
             this.ToolPanel.Location = new System.Drawing.Point(9, 20);
@@ -105,48 +115,118 @@
             this.RightClickChange,
             this.RightClickDelete});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 158);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(146, 136);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // RightClickInputA
             // 
             this.RightClickInputA.Name = "RightClickInputA";
-            this.RightClickInputA.Size = new System.Drawing.Size(152, 22);
+            this.RightClickInputA.Size = new System.Drawing.Size(145, 22);
             this.RightClickInputA.Text = "Add InputA";
             this.RightClickInputA.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // RightClickInputB
             // 
             this.RightClickInputB.Name = "RightClickInputB";
-            this.RightClickInputB.Size = new System.Drawing.Size(152, 22);
+            this.RightClickInputB.Size = new System.Drawing.Size(145, 22);
             this.RightClickInputB.Text = "Add Input B";
             this.RightClickInputB.Click += new System.EventHandler(this.addOutputAToolStripMenuItem_Click);
             // 
             // RightClickOutputA
             // 
             this.RightClickOutputA.Name = "RightClickOutputA";
-            this.RightClickOutputA.Size = new System.Drawing.Size(152, 22);
+            this.RightClickOutputA.Size = new System.Drawing.Size(145, 22);
             this.RightClickOutputA.Text = "Add OutputA";
             // 
             // RightClickOutputB
             // 
             this.RightClickOutputB.Name = "RightClickOutputB";
-            this.RightClickOutputB.Size = new System.Drawing.Size(152, 22);
+            this.RightClickOutputB.Size = new System.Drawing.Size(145, 22);
             this.RightClickOutputB.Text = "Add OutPutB";
             // 
             // RightClickChange
             // 
             this.RightClickChange.Name = "RightClickChange";
-            this.RightClickChange.Size = new System.Drawing.Size(152, 22);
+            this.RightClickChange.Size = new System.Drawing.Size(145, 22);
             this.RightClickChange.Text = "Change";
             this.RightClickChange.Click += new System.EventHandler(this.RightClickChange_Click);
             // 
             // RightClickDelete
             // 
             this.RightClickDelete.Name = "RightClickDelete";
-            this.RightClickDelete.Size = new System.Drawing.Size(152, 22);
+            this.RightClickDelete.Size = new System.Drawing.Size(145, 22);
             this.RightClickDelete.Text = "Delete";
             this.RightClickDelete.Click += new System.EventHandler(this.RightClickDelete_Click);
+            // 
+            // BtnAddpipe
+            // 
+            this.BtnAddpipe.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnAddpipe.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnAddpipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddpipe.Location = new System.Drawing.Point(2, 36);
+            this.BtnAddpipe.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAddpipe.Name = "BtnAddpipe";
+            this.BtnAddpipe.Size = new System.Drawing.Size(115, 32);
+            this.BtnAddpipe.TabIndex = 2;
+            this.BtnAddpipe.Text = "Pipe";
+            this.BtnAddpipe.UseVisualStyleBackColor = false;
+            this.BtnAddpipe.Click += new System.EventHandler(this.BtnAddpipe_Click);
+            // 
+            // BtnSplitter
+            // 
+            this.BtnSplitter.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnSplitter.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnSplitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSplitter.Location = new System.Drawing.Point(2, 72);
+            this.BtnSplitter.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSplitter.Name = "BtnSplitter";
+            this.BtnSplitter.Size = new System.Drawing.Size(115, 32);
+            this.BtnSplitter.TabIndex = 3;
+            this.BtnSplitter.Text = "Splitter";
+            this.BtnSplitter.UseVisualStyleBackColor = false;
+            this.BtnSplitter.Click += new System.EventHandler(this.BtnSplitter_Click);
+            // 
+            // BtnMerger
+            // 
+            this.BtnMerger.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnMerger.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnMerger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMerger.Location = new System.Drawing.Point(3, 108);
+            this.BtnMerger.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnMerger.Name = "BtnMerger";
+            this.BtnMerger.Size = new System.Drawing.Size(115, 32);
+            this.BtnMerger.TabIndex = 4;
+            this.BtnMerger.Text = "Merger";
+            this.BtnMerger.UseVisualStyleBackColor = false;
+            this.BtnMerger.Click += new System.EventHandler(this.BtnMerger_Click);
+            // 
+            // BtnPump
+            // 
+            this.BtnPump.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnPump.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnPump.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPump.Location = new System.Drawing.Point(3, 144);
+            this.BtnPump.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnPump.Name = "BtnPump";
+            this.BtnPump.Size = new System.Drawing.Size(115, 32);
+            this.BtnPump.TabIndex = 5;
+            this.BtnPump.Text = "Pump";
+            this.BtnPump.UseVisualStyleBackColor = false;
+            this.BtnPump.Click += new System.EventHandler(this.BtnPump_Click);
+            // 
+            // BtnSink
+            // 
+            this.BtnSink.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnSink.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnSink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSink.Location = new System.Drawing.Point(3, 179);
+            this.BtnSink.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSink.Name = "BtnSink";
+            this.BtnSink.Size = new System.Drawing.Size(115, 32);
+            this.BtnSink.TabIndex = 6;
+            this.BtnSink.Text = "Sink";
+            this.BtnSink.UseVisualStyleBackColor = false;
+            this.BtnSink.Click += new System.EventHandler(this.BtnSink_Click);
             // 
             // Form1
             // 
@@ -184,6 +264,11 @@
         private System.Windows.Forms.ToolStripMenuItem RightClickOutputB;
         private System.Windows.Forms.ToolStripMenuItem RightClickChange;
         private System.Windows.Forms.ToolStripMenuItem RightClickDelete;
+        private System.Windows.Forms.Button BtnAddpipe;
+        private System.Windows.Forms.Button BtnSplitter;
+        private System.Windows.Forms.Button BtnMerger;
+        private System.Windows.Forms.Button BtnSink;
+        private System.Windows.Forms.Button BtnPump;
     }
 }
 
