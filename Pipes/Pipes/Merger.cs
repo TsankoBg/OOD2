@@ -29,7 +29,10 @@ namespace Pipes
             if (OutputA != null) OutputA.SetFlow(Flow);
         }
 
-
+        public override void AttachComponent(Component output)
+        {
+            this.OutputA = output;
+        }
 
     }
 }

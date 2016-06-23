@@ -35,11 +35,12 @@
             this.LoadButton = new System.Windows.Forms.Button();
             this.GridPanel = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.addOutputAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addOutputBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RightClickInputA = new System.Windows.Forms.ToolStripMenuItem();
+            this.RightClickInputB = new System.Windows.Forms.ToolStripMenuItem();
+            this.RightClickOutputA = new System.Windows.Forms.ToolStripMenuItem();
+            this.RightClickOutputB = new System.Windows.Forms.ToolStripMenuItem();
+            this.RightClickChange = new System.Windows.Forms.ToolStripMenuItem();
+            this.RightClickDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,45 +98,55 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.addOutputAToolStripMenuItem,
-            this.addOutputBToolStripMenuItem,
-            this.changeToolStripMenuItem,
-            this.deleteToolStripMenuItem});
+            this.RightClickInputA,
+            this.RightClickInputB,
+            this.RightClickOutputA,
+            this.RightClickOutputB,
+            this.RightClickChange,
+            this.RightClickDelete});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 136);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 158);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
-            // toolStripMenuItem1
+            // RightClickInputA
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem1.Text = "Add Input";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.RightClickInputA.Name = "RightClickInputA";
+            this.RightClickInputA.Size = new System.Drawing.Size(152, 22);
+            this.RightClickInputA.Text = "Add InputA";
+            this.RightClickInputA.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
-            // addOutputAToolStripMenuItem
+            // RightClickInputB
             // 
-            this.addOutputAToolStripMenuItem.Name = "addOutputAToolStripMenuItem";
-            this.addOutputAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addOutputAToolStripMenuItem.Text = "Add OutputA";
+            this.RightClickInputB.Name = "RightClickInputB";
+            this.RightClickInputB.Size = new System.Drawing.Size(152, 22);
+            this.RightClickInputB.Text = "Add Input B";
+            this.RightClickInputB.Click += new System.EventHandler(this.addOutputAToolStripMenuItem_Click);
             // 
-            // addOutputBToolStripMenuItem
+            // RightClickOutputA
             // 
-            this.addOutputBToolStripMenuItem.Name = "addOutputBToolStripMenuItem";
-            this.addOutputBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.addOutputBToolStripMenuItem.Text = "Add OutputB";
+            this.RightClickOutputA.Name = "RightClickOutputA";
+            this.RightClickOutputA.Size = new System.Drawing.Size(152, 22);
+            this.RightClickOutputA.Text = "Add OutputA";
             // 
-            // changeToolStripMenuItem
+            // RightClickOutputB
             // 
-            this.changeToolStripMenuItem.Name = "changeToolStripMenuItem";
-            this.changeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.changeToolStripMenuItem.Text = "Change";
+            this.RightClickOutputB.Name = "RightClickOutputB";
+            this.RightClickOutputB.Size = new System.Drawing.Size(152, 22);
+            this.RightClickOutputB.Text = "Add OutPutB";
             // 
-            // deleteToolStripMenuItem
+            // RightClickChange
             // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.RightClickChange.Name = "RightClickChange";
+            this.RightClickChange.Size = new System.Drawing.Size(152, 22);
+            this.RightClickChange.Text = "Change";
+            this.RightClickChange.Click += new System.EventHandler(this.RightClickChange_Click);
+            // 
+            // RightClickDelete
+            // 
+            this.RightClickDelete.Name = "RightClickDelete";
+            this.RightClickDelete.Size = new System.Drawing.Size(152, 22);
+            this.RightClickDelete.Text = "Delete";
+            this.RightClickDelete.Click += new System.EventHandler(this.RightClickDelete_Click);
             // 
             // Form1
             // 
@@ -167,11 +178,12 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button LoadButton;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem addOutputAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addOutputBToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RightClickInputA;
+        private System.Windows.Forms.ToolStripMenuItem RightClickInputB;
+        private System.Windows.Forms.ToolStripMenuItem RightClickOutputA;
+        private System.Windows.Forms.ToolStripMenuItem RightClickOutputB;
+        private System.Windows.Forms.ToolStripMenuItem RightClickChange;
+        private System.Windows.Forms.ToolStripMenuItem RightClickDelete;
     }
 }
 
