@@ -81,7 +81,14 @@ namespace Pipes
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-          
+            RightClickInputA.Visible = false;
+            RightClickInputB.Visible = false;
+            RightClickOutputA.Visible = false;
+            RightClickOutputB.Visible = false;
+            RightClickChange.Visible = false;
+            RightClickDelete.Visible = false;
+
+
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
@@ -93,33 +100,50 @@ namespace Pipes
                     if (c is Pipe)
                     {
                         // when you right click only Pipe properties are shown 
-                        RightClickInputB.Visible = false;
-                        RightClickOutputB.Visible = false;
+                        RightClickInputA.Visible = true;
+                        RightClickOutputA.Visible = true;
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
 
                     }
                    else if(c is Pump)
                     {
-                        RightClickInputA.Visible = false;
-                        RightClickInputB.Visible = false;
-                        RightClickOutputB.Visible = false;
+                       
+                       
+                        RightClickOutputA.Visible = true;
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
 
                     }
                     else if (c is Merger)
                     {
-                        RightClickOutputB.Visible = false;
+                        RightClickInputA.Visible = true;
+                        RightClickOutputA.Visible = true;
+                        RightClickOutputB.Visible = true;
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
 
                     }
                     else if (c is Splitter)
                     {
-                        RightClickInputB.Visible = false;
+                        RightClickInputA.Visible = true;
+                        RightClickInputB.Visible = true;
+                        RightClickOutputA.Visible = true;
+                       
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
 
                     }
                     else if ( c is Sink)
                     {
-                        RightClickInputB.Visible = false;
-                        RightClickOutputA.Visible = false;
-                        RightClickOutputB.Visible = false;
+                        RightClickInputA.Visible = true;
+                       
+                      
+
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
                     }
+                   
                 }
 
             }
