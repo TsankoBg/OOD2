@@ -13,9 +13,9 @@ namespace Pipes
     class Component
     {
 
-        PointP location;
+     public   PointP location;
         private int flow;
-     public int Flow
+        public int Flow
         {
             get
             {
@@ -53,7 +53,7 @@ namespace Pipes
         //    return -1;
         //}
 
-        public void AttachComponent()
+        public virtual void AttachComponent(Component current)
         {
 
          

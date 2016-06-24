@@ -14,7 +14,7 @@ namespace Pipes
         Component OutputA { get; set; }
 
         private int safetyLimit;
-        public int SafetyLimit
+        private int SafetyLimit
         {
             get
             {
@@ -52,6 +52,9 @@ namespace Pipes
             this.Flow = x;
             if (OutputA != null) OutputA.SetFlow(Flow);
         }
-
+        public override void AttachComponent(Component current)
+        {
+            OutputA = current;
+        }
     }
 }
