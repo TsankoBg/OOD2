@@ -18,14 +18,15 @@ namespace Pipes
 
         public Form1()
         {
+
             InitializeComponent();
             system.showsave += allowSave;
             system.saveload = new SaveLoad();
-<<<<<<< HEAD
+//<<<<<<< HEAD
             system.grid = new Grid(GridPanel, system.CurrentXsize);
-=======
+//=======
             p = new PointP();
->>>>>>> origin/master
+//>>>>>>> origin/master
             //When the SaveSinceLast is at anypoint turned to false,
             //an event will rise not allowing the Save Button to be clicked
         }
@@ -86,12 +87,18 @@ namespace Pipes
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-            RightClickInputA.Visible = false;
-            RightClickInputB.Visible = false;
-            RightClickOutputA.Visible = false;
-            RightClickOutputB.Visible = false;
-            RightClickChange.Visible = false;
-            RightClickDelete.Visible = false;
+            //RightClickInputA.Visible = false;
+            //RightClickInputB.Visible = false;
+            //RightClickOutputA.Visible = false;
+            //RightClickOutputB.Visible = false;
+            //RightClickChange.Visible = false;
+            //RightClickDelete.Visible = false;
+            RightClickInputA.Enabled = false;
+            RightClickInputB.Enabled = false;
+            RightClickOutputA.Enabled = false;
+            RightClickOutputB.Enabled = false;
+            RightClickDelete.Enabled = false;
+            RightClickChange.Enabled = false;
 
 
             foreach (Component c in system.Components)
@@ -105,48 +112,80 @@ namespace Pipes
                     if (c is Pipe)
                     {
                         // when you right click only Pipe properties are shown 
-                        RightClickInputA.Visible = true;
-                        RightClickOutputA.Visible = true;
-                        RightClickChange.Visible = true;
-                        RightClickDelete.Visible = true;
+
+                        //RightClickInputA.Visible = true;
+                        //RightClickOutputA.Visible = true;
+                        //RightClickChange.Visible = true;
+                        //RightClickDelete.Visible = true;
+                        RightClickInputA.Enabled = true;
+                        RightClickInputB.Enabled = false;
+                        RightClickOutputA.Enabled = true;
+                        RightClickOutputB.Enabled = false;
+                        RightClickChange.Enabled = true;
+                        RightClickDelete.Enabled = true;
 
                     }
                    else if(c is Pump)
                     {
-                       
-                       
-                        RightClickOutputA.Visible = true;
-                        RightClickChange.Visible = true;
-                        RightClickDelete.Visible = true;
+
+
+                        //RightClickOutputA.Visible = true;
+                        //RightClickChange.Visible = true;
+                        //RightClickDelete.Visible = true;
+                        RightClickInputA.Enabled = false;
+                        RightClickInputB.Enabled = false;
+                        RightClickOutputA.Enabled = true;
+                        RightClickOutputB.Enabled = false;
+                        RightClickChange.Enabled = true;
+                        RightClickDelete.Enabled = true;
 
                     }
                     else if (c is Merger)
                     {
-                        RightClickInputA.Visible = true;
-                        RightClickOutputA.Visible = true;
-                        RightClickOutputB.Visible = true;
-                        RightClickChange.Visible = true;
-                        RightClickDelete.Visible = true;
+
+                        //RightClickInputA.Visible = true;
+                        //RightClickOutputA.Visible = true;
+                        //RightClickOutputB.Visible = true;
+                        //RightClickChange.Visible = true;
+                        //RightClickDelete.Visible = true;
+                        RightClickInputA.Enabled = true;
+                        RightClickInputB.Enabled = true;
+                        RightClickOutputA.Enabled = true;
+                        RightClickOutputB.Enabled = false;
+                        RightClickChange.Enabled = true;
+                        RightClickDelete.Enabled = true;
 
                     }
                     else if (c is Splitter)
                     {
-                        RightClickInputA.Visible = true;
-                        RightClickInputB.Visible = true;
-                        RightClickOutputA.Visible = true;
-                       
-                        RightClickChange.Visible = true;
-                        RightClickDelete.Visible = true;
+                        //RightClickInputA.Visible = true;
+                        //RightClickInputB.Visible = true;
+                        //RightClickOutputA.Visible = true;
+
+                        //RightClickChange.Visible = true;
+                        //RightClickDelete.Visible = true;
+                        RightClickInputA.Enabled = true;
+                        RightClickInputB.Enabled = false;
+                        RightClickOutputA.Enabled = true;
+                        RightClickOutputB.Enabled =true;
+                        RightClickChange.Enabled = true;
+                        RightClickDelete.Enabled = true;
 
                     }
                     else if ( c is Sink)
                     {
-                        RightClickInputA.Visible = true;
-                       
-                      
+                        //RightClickInputA.Visible = true;
 
-                        RightClickChange.Visible = true;
-                        RightClickDelete.Visible = true;
+
+
+                        //RightClickChange.Visible = true;
+                        //RightClickDelete.Visible = true;
+                        RightClickInputA.Enabled = true;
+                        RightClickInputB.Enabled = false;
+                        RightClickOutputA.Enabled =false;
+                        RightClickOutputB.Enabled = false;
+                        RightClickChange.Enabled = true;
+                        RightClickDelete.Enabled = true;
                     }
                    
                 }
@@ -216,7 +255,7 @@ namespace Pipes
 
         private void GridPanel_Paint(object sender, PaintEventArgs e)
         {
-<<<<<<< HEAD
+//<<<<<<< HEAD
             base.OnPaint(e);
             using (Graphics g = e.Graphics)
             {
@@ -224,7 +263,7 @@ namespace Pipes
             }
            
             
-=======
+//=======
 
         }
 
@@ -232,7 +271,16 @@ namespace Pipes
         {
             p.X = MousePosition.X;
             p.Y = MousePosition.Y;
->>>>>>> origin/master
+//>>>>>>> origin/master
+        }
+
+        private void contextMenuStrip1_Opened(object sender, EventArgs e)
+        {
+        }
+
+        private void contextMenuStrip1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
