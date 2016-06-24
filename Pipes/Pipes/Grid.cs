@@ -18,8 +18,8 @@ namespace Pipes
         float ySpace;
         Graphics graph;
         public int lines { get; set; }
-        Pen pen = new Pen(Brushes.Black);
-
+        Pen pen = new Pen(Brushes.Black,1);
+        
         public Grid(Panel pan, int NumberOfLines)
         {
             this.panel = pan;
