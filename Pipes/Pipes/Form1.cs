@@ -18,9 +18,9 @@ namespace Pipes
         public Form1()
         {
             InitializeComponent();
-            system.grid = new Grid(this.GridPanel, system.CurrentXsize);
             system.showsave += allowSave;
             system.saveload = new SaveLoad();
+            system.grid = new Grid(GridPanel, system.CurrentXsize);
             //When the SaveSinceLast is at anypoint turned to false,
             //an event will rise not allowing the Save Button to be clicked
         }
@@ -183,6 +183,17 @@ namespace Pipes
         {
             PointP p = new PointP(MousePosition.X, MousePosition.Y);
             system.addComponent(new Sink(p));
+        }
+
+        private void GridPanel_Paint(object sender, PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            using (Graphics g = e.Graphics)
+            {
+                system.grid.drawGrid(g, system.CurrentXsize);
+            }
+           
+            
         }
     }
 }

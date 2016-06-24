@@ -16,24 +16,25 @@ namespace Pipes
         float width;
         float xSpace;
         float ySpace;
-        Graphics graph;
-        public int lines { get; set; }
-        Pen pen = new Pen(Brushes.Black,1);
         
-        public Grid(Panel pan, int NumberOfLines)
+        public int lines { get; set; }
+        Pen pen;
+        
+        public Grid(Panel pan,int NumberOfLines)
         {
+            pen = new Pen(Brushes.Black, 1);
             this.panel = pan;
             this.xy.X = 0f;
             this.xy.Y = 0f;
             this.height = pan.Height;
             this.width = pan.Width;
-            graph = panel.CreateGraphics();
             this.lines = NumberOfLines;
-            drawGrid(lines);
+            
 
         }
-        void drawGrid(int NumberOfLines)
+       public void drawGrid(Graphics graphic,int NumberOfLines)
         {
+            Graphics graph = graphic;
             lines = NumberOfLines;
             xy.X = 0f;
             xy.Y = 0f;
@@ -43,15 +44,16 @@ namespace Pipes
             //Draws the Vertical Grid Lines
             for (int i = 0; i <= lines; i++)
             {
-                graph.DrawLine(pen, xy.X, xy.Y, xy.X, height);
+                graph.DrawLine(pen, xy.X, xy.Y, xy.X, this.height);
+                xy.X += xSpace;
 
             }
             xy.X = 0f;
             //Draw the Horizontal Grid Lines
             for (int i = 0; i < lines; i++)
             {
-                graph.DrawLine(pen, xy.X, xy.Y, width, xy.Y);
-
+                graph.DrawLine(pen, xy.X, xy.Y, this.width, xy.Y);
+                xy.Y += ySpace;
             }
 
         }
@@ -64,7 +66,7 @@ namespace Pipes
             Math.Floor(gridSpace.Y);
             return gridSpace;
         }
-        public bool enlarge()
+       /* public bool enlarge()
         {
             int max = 15;
             if (lines >= max)
@@ -95,7 +97,7 @@ namespace Pipes
                 drawGrid(lines);
                 return true;
             }
-        }
+        }*/
 
     }
 }
