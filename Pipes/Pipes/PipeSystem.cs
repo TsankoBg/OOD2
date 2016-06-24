@@ -24,9 +24,9 @@ namespace Pipes
         public PipeSystem()
         {
             Components = new List<Component>();
-            p = new PointP(12F, 5F);
+            p = new PointP();
             // populating the list for testing purposes
-            Components.Add(new Merger(p));
+           
         }
 
         public int CurrentXsize
