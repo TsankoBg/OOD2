@@ -13,6 +13,7 @@ namespace Pipes
     public partial class Form1 : Form
     {
         PipeSystem system = new PipeSystem();
+        PointP p;
         
 
         public Form1()
@@ -21,6 +22,7 @@ namespace Pipes
             system.grid = new Grid(this.GridPanel, system.CurrentXsize);
             system.showsave += allowSave;
             system.saveload = new SaveLoad();
+            p = new PointP();
             //When the SaveSinceLast is at anypoint turned to false,
             //an event will rise not allowing the Save Button to be clicked
         }
@@ -181,32 +183,43 @@ namespace Pipes
 
         private void BtnAddpipe_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            
             system.addComponent(new Pipe(p));
         }
 
         private void BtnSplitter_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+           
             system.addComponent(new Splitter(p));
         }
 
         private void BtnMerger_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            
             system.addComponent(new Merger(p));
         }
 
         private void BtnPump_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+           
             system.addComponent(new Pump(p));
         }
 
         private void BtnSink_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+           
             system.addComponent(new Sink(p));
+        }
+
+        private void GridPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void GridPanel_Click(object sender, EventArgs e)
+        {
+            p.X = MousePosition.X;
+            p.Y = MousePosition.Y;
         }
     }
 }

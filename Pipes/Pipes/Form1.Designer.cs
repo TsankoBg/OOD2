@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ToolPanel = new System.Windows.Forms.Panel();
+            this.BtnSink = new System.Windows.Forms.Button();
+            this.BtnPump = new System.Windows.Forms.Button();
+            this.BtnMerger = new System.Windows.Forms.Button();
+            this.BtnSplitter = new System.Windows.Forms.Button();
+            this.BtnAddpipe = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.LoadButton = new System.Windows.Forms.Button();
             this.GridPanel = new System.Windows.Forms.Panel();
@@ -41,11 +46,6 @@
             this.RightClickOutputB = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickChange = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.BtnAddpipe = new System.Windows.Forms.Button();
-            this.BtnSplitter = new System.Windows.Forms.Button();
-            this.BtnMerger = new System.Windows.Forms.Button();
-            this.BtnPump = new System.Windows.Forms.Button();
-            this.BtnSink = new System.Windows.Forms.Button();
             this.ToolPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -61,12 +61,82 @@
             this.ToolPanel.Controls.Add(this.SaveButton);
             this.ToolPanel.Controls.Add(this.LoadButton);
             this.ToolPanel.Location = new System.Drawing.Point(9, 20);
-            this.ToolPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ToolPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ToolPanel.MaximumSize = new System.Drawing.Size(120, 390);
             this.ToolPanel.MinimumSize = new System.Drawing.Size(120, 390);
             this.ToolPanel.Name = "ToolPanel";
             this.ToolPanel.Size = new System.Drawing.Size(120, 390);
             this.ToolPanel.TabIndex = 0;
+            // 
+            // BtnSink
+            // 
+            this.BtnSink.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnSink.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnSink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSink.Location = new System.Drawing.Point(3, 179);
+            this.BtnSink.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSink.Name = "BtnSink";
+            this.BtnSink.Size = new System.Drawing.Size(115, 32);
+            this.BtnSink.TabIndex = 6;
+            this.BtnSink.Text = "Sink";
+            this.BtnSink.UseVisualStyleBackColor = false;
+            this.BtnSink.Click += new System.EventHandler(this.BtnSink_Click);
+            // 
+            // BtnPump
+            // 
+            this.BtnPump.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnPump.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnPump.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPump.Location = new System.Drawing.Point(3, 144);
+            this.BtnPump.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnPump.Name = "BtnPump";
+            this.BtnPump.Size = new System.Drawing.Size(115, 32);
+            this.BtnPump.TabIndex = 5;
+            this.BtnPump.Text = "Pump";
+            this.BtnPump.UseVisualStyleBackColor = false;
+            this.BtnPump.Click += new System.EventHandler(this.BtnPump_Click);
+            // 
+            // BtnMerger
+            // 
+            this.BtnMerger.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnMerger.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnMerger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMerger.Location = new System.Drawing.Point(3, 108);
+            this.BtnMerger.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnMerger.Name = "BtnMerger";
+            this.BtnMerger.Size = new System.Drawing.Size(115, 32);
+            this.BtnMerger.TabIndex = 4;
+            this.BtnMerger.Text = "Merger";
+            this.BtnMerger.UseVisualStyleBackColor = false;
+            this.BtnMerger.Click += new System.EventHandler(this.BtnMerger_Click);
+            // 
+            // BtnSplitter
+            // 
+            this.BtnSplitter.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnSplitter.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnSplitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSplitter.Location = new System.Drawing.Point(2, 72);
+            this.BtnSplitter.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSplitter.Name = "BtnSplitter";
+            this.BtnSplitter.Size = new System.Drawing.Size(115, 32);
+            this.BtnSplitter.TabIndex = 3;
+            this.BtnSplitter.Text = "Splitter";
+            this.BtnSplitter.UseVisualStyleBackColor = false;
+            this.BtnSplitter.Click += new System.EventHandler(this.BtnSplitter_Click);
+            // 
+            // BtnAddpipe
+            // 
+            this.BtnAddpipe.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnAddpipe.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnAddpipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAddpipe.Location = new System.Drawing.Point(2, 36);
+            this.BtnAddpipe.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAddpipe.Name = "BtnAddpipe";
+            this.BtnAddpipe.Size = new System.Drawing.Size(115, 32);
+            this.BtnAddpipe.TabIndex = 2;
+            this.BtnAddpipe.Text = "Pipe";
+            this.BtnAddpipe.UseVisualStyleBackColor = false;
+            this.BtnAddpipe.Click += new System.EventHandler(this.BtnAddpipe_Click);
             // 
             // SaveButton
             // 
@@ -74,7 +144,7 @@
             this.SaveButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.Location = new System.Drawing.Point(3, 320);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(115, 32);
             this.SaveButton.TabIndex = 1;
@@ -88,7 +158,7 @@
             this.LoadButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.LoadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadButton.Location = new System.Drawing.Point(3, 356);
-            this.LoadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoadButton.Margin = new System.Windows.Forms.Padding(2);
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(115, 32);
             this.LoadButton.TabIndex = 0;
@@ -99,11 +169,13 @@
             // GridPanel
             // 
             this.GridPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.GridPanel.Location = new System.Drawing.Point(139, 20);
-            this.GridPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GridPanel.Location = new System.Drawing.Point(142, 20);
+            this.GridPanel.Margin = new System.Windows.Forms.Padding(2);
             this.GridPanel.Name = "GridPanel";
             this.GridPanel.Size = new System.Drawing.Size(400, 390);
             this.GridPanel.TabIndex = 1;
+            this.GridPanel.Click += new System.EventHandler(this.GridPanel_Click);
+            this.GridPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.GridPanel_Paint);
             // 
             // contextMenuStrip1
             // 
@@ -157,76 +229,6 @@
             this.RightClickDelete.Size = new System.Drawing.Size(145, 22);
             this.RightClickDelete.Text = "Delete";
             this.RightClickDelete.Click += new System.EventHandler(this.RightClickDelete_Click);
-            // 
-            // BtnAddpipe
-            // 
-            this.BtnAddpipe.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnAddpipe.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnAddpipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAddpipe.Location = new System.Drawing.Point(2, 36);
-            this.BtnAddpipe.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnAddpipe.Name = "BtnAddpipe";
-            this.BtnAddpipe.Size = new System.Drawing.Size(115, 32);
-            this.BtnAddpipe.TabIndex = 2;
-            this.BtnAddpipe.Text = "Pipe";
-            this.BtnAddpipe.UseVisualStyleBackColor = false;
-            this.BtnAddpipe.Click += new System.EventHandler(this.BtnAddpipe_Click);
-            // 
-            // BtnSplitter
-            // 
-            this.BtnSplitter.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnSplitter.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnSplitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSplitter.Location = new System.Drawing.Point(2, 72);
-            this.BtnSplitter.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnSplitter.Name = "BtnSplitter";
-            this.BtnSplitter.Size = new System.Drawing.Size(115, 32);
-            this.BtnSplitter.TabIndex = 3;
-            this.BtnSplitter.Text = "Splitter";
-            this.BtnSplitter.UseVisualStyleBackColor = false;
-            this.BtnSplitter.Click += new System.EventHandler(this.BtnSplitter_Click);
-            // 
-            // BtnMerger
-            // 
-            this.BtnMerger.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnMerger.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnMerger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMerger.Location = new System.Drawing.Point(3, 108);
-            this.BtnMerger.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnMerger.Name = "BtnMerger";
-            this.BtnMerger.Size = new System.Drawing.Size(115, 32);
-            this.BtnMerger.TabIndex = 4;
-            this.BtnMerger.Text = "Merger";
-            this.BtnMerger.UseVisualStyleBackColor = false;
-            this.BtnMerger.Click += new System.EventHandler(this.BtnMerger_Click);
-            // 
-            // BtnPump
-            // 
-            this.BtnPump.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnPump.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnPump.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPump.Location = new System.Drawing.Point(3, 144);
-            this.BtnPump.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnPump.Name = "BtnPump";
-            this.BtnPump.Size = new System.Drawing.Size(115, 32);
-            this.BtnPump.TabIndex = 5;
-            this.BtnPump.Text = "Pump";
-            this.BtnPump.UseVisualStyleBackColor = false;
-            this.BtnPump.Click += new System.EventHandler(this.BtnPump_Click);
-            // 
-            // BtnSink
-            // 
-            this.BtnSink.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnSink.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnSink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSink.Location = new System.Drawing.Point(3, 179);
-            this.BtnSink.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnSink.Name = "BtnSink";
-            this.BtnSink.Size = new System.Drawing.Size(115, 32);
-            this.BtnSink.TabIndex = 6;
-            this.BtnSink.Text = "Sink";
-            this.BtnSink.UseVisualStyleBackColor = false;
-            this.BtnSink.Click += new System.EventHandler(this.BtnSink_Click);
             // 
             // Form1
             // 
