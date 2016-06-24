@@ -13,6 +13,7 @@ namespace Pipes
     public partial class Form1 : Form
     {
         PipeSystem system = new PipeSystem();
+        PointP p;
         
 
         public Form1()
@@ -20,7 +21,11 @@ namespace Pipes
             InitializeComponent();
             system.showsave += allowSave;
             system.saveload = new SaveLoad();
+<<<<<<< HEAD
             system.grid = new Grid(GridPanel, system.CurrentXsize);
+=======
+            p = new PointP();
+>>>>>>> origin/master
             //When the SaveSinceLast is at anypoint turned to false,
             //an event will rise not allowing the Save Button to be clicked
         }
@@ -81,7 +86,14 @@ namespace Pipes
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-          
+            RightClickInputA.Visible = false;
+            RightClickInputB.Visible = false;
+            RightClickOutputA.Visible = false;
+            RightClickOutputB.Visible = false;
+            RightClickChange.Visible = false;
+            RightClickDelete.Visible = false;
+
+
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
@@ -93,33 +105,50 @@ namespace Pipes
                     if (c is Pipe)
                     {
                         // when you right click only Pipe properties are shown 
-                        RightClickInputB.Visible = false;
-                        RightClickOutputB.Visible = false;
+                        RightClickInputA.Visible = true;
+                        RightClickOutputA.Visible = true;
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
 
                     }
                    else if(c is Pump)
                     {
-                        RightClickInputA.Visible = false;
-                        RightClickInputB.Visible = false;
-                        RightClickOutputB.Visible = false;
+                       
+                       
+                        RightClickOutputA.Visible = true;
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
 
                     }
                     else if (c is Merger)
                     {
-                        RightClickOutputB.Visible = false;
+                        RightClickInputA.Visible = true;
+                        RightClickOutputA.Visible = true;
+                        RightClickOutputB.Visible = true;
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
 
                     }
                     else if (c is Splitter)
                     {
-                        RightClickInputB.Visible = false;
+                        RightClickInputA.Visible = true;
+                        RightClickInputB.Visible = true;
+                        RightClickOutputA.Visible = true;
+                       
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
 
                     }
                     else if ( c is Sink)
                     {
-                        RightClickInputB.Visible = false;
-                        RightClickOutputA.Visible = false;
-                        RightClickOutputB.Visible = false;
+                        RightClickInputA.Visible = true;
+                       
+                      
+
+                        RightClickChange.Visible = true;
+                        RightClickDelete.Visible = true;
                     }
+                   
                 }
 
             }
@@ -157,36 +186,37 @@ namespace Pipes
 
         private void BtnAddpipe_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            
             system.addComponent(new Pipe(p));
         }
 
         private void BtnSplitter_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+           
             system.addComponent(new Splitter(p));
         }
 
         private void BtnMerger_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+            
             system.addComponent(new Merger(p));
         }
 
         private void BtnPump_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+           
             system.addComponent(new Pump(p));
         }
 
         private void BtnSink_Click(object sender, EventArgs e)
         {
-            PointP p = new PointP(MousePosition.X, MousePosition.Y);
+           
             system.addComponent(new Sink(p));
         }
 
         private void GridPanel_Paint(object sender, PaintEventArgs e)
         {
+<<<<<<< HEAD
             base.OnPaint(e);
             using (Graphics g = e.Graphics)
             {
@@ -194,6 +224,15 @@ namespace Pipes
             }
            
             
+=======
+
+        }
+
+        private void GridPanel_Click(object sender, EventArgs e)
+        {
+            p.X = MousePosition.X;
+            p.Y = MousePosition.Y;
+>>>>>>> origin/master
         }
     }
 }

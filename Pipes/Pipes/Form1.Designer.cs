@@ -60,9 +60,16 @@
             this.ToolPanel.Controls.Add(this.BtnAddpipe);
             this.ToolPanel.Controls.Add(this.SaveButton);
             this.ToolPanel.Controls.Add(this.LoadButton);
+<<<<<<< HEAD
             this.ToolPanel.Location = new System.Drawing.Point(14, 31);
             this.ToolPanel.MaximumSize = new System.Drawing.Size(180, 600);
             this.ToolPanel.MinimumSize = new System.Drawing.Size(180, 600);
+=======
+            this.ToolPanel.Location = new System.Drawing.Point(9, 20);
+            this.ToolPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.ToolPanel.MaximumSize = new System.Drawing.Size(120, 390);
+            this.ToolPanel.MinimumSize = new System.Drawing.Size(120, 390);
+>>>>>>> origin/master
             this.ToolPanel.Name = "ToolPanel";
             this.ToolPanel.Size = new System.Drawing.Size(180, 600);
             this.ToolPanel.TabIndex = 0;
@@ -72,9 +79,16 @@
             this.BtnSink.BackColor = System.Drawing.Color.LightSlateGray;
             this.BtnSink.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnSink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnSink.Location = new System.Drawing.Point(4, 275);
             this.BtnSink.Name = "BtnSink";
             this.BtnSink.Size = new System.Drawing.Size(172, 49);
+=======
+            this.BtnSink.Location = new System.Drawing.Point(3, 179);
+            this.BtnSink.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSink.Name = "BtnSink";
+            this.BtnSink.Size = new System.Drawing.Size(115, 32);
+>>>>>>> origin/master
             this.BtnSink.TabIndex = 6;
             this.BtnSink.Text = "Sink";
             this.BtnSink.UseVisualStyleBackColor = false;
@@ -85,9 +99,16 @@
             this.BtnPump.BackColor = System.Drawing.Color.LightSlateGray;
             this.BtnPump.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnPump.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnPump.Location = new System.Drawing.Point(4, 222);
             this.BtnPump.Name = "BtnPump";
             this.BtnPump.Size = new System.Drawing.Size(172, 49);
+=======
+            this.BtnPump.Location = new System.Drawing.Point(3, 144);
+            this.BtnPump.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnPump.Name = "BtnPump";
+            this.BtnPump.Size = new System.Drawing.Size(115, 32);
+>>>>>>> origin/master
             this.BtnPump.TabIndex = 5;
             this.BtnPump.Text = "Pump";
             this.BtnPump.UseVisualStyleBackColor = false;
@@ -98,9 +119,16 @@
             this.BtnMerger.BackColor = System.Drawing.Color.LightSlateGray;
             this.BtnMerger.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnMerger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnMerger.Location = new System.Drawing.Point(4, 166);
             this.BtnMerger.Name = "BtnMerger";
             this.BtnMerger.Size = new System.Drawing.Size(172, 49);
+=======
+            this.BtnMerger.Location = new System.Drawing.Point(3, 108);
+            this.BtnMerger.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnMerger.Name = "BtnMerger";
+            this.BtnMerger.Size = new System.Drawing.Size(115, 32);
+>>>>>>> origin/master
             this.BtnMerger.TabIndex = 4;
             this.BtnMerger.Text = "Merger";
             this.BtnMerger.UseVisualStyleBackColor = false;
@@ -111,9 +139,16 @@
             this.BtnSplitter.BackColor = System.Drawing.Color.LightSlateGray;
             this.BtnSplitter.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnSplitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnSplitter.Location = new System.Drawing.Point(3, 111);
             this.BtnSplitter.Name = "BtnSplitter";
             this.BtnSplitter.Size = new System.Drawing.Size(172, 49);
+=======
+            this.BtnSplitter.Location = new System.Drawing.Point(2, 72);
+            this.BtnSplitter.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSplitter.Name = "BtnSplitter";
+            this.BtnSplitter.Size = new System.Drawing.Size(115, 32);
+>>>>>>> origin/master
             this.BtnSplitter.TabIndex = 3;
             this.BtnSplitter.Text = "Splitter";
             this.BtnSplitter.UseVisualStyleBackColor = false;
@@ -124,9 +159,16 @@
             this.BtnAddpipe.BackColor = System.Drawing.Color.LightSlateGray;
             this.BtnAddpipe.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnAddpipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnAddpipe.Location = new System.Drawing.Point(3, 55);
             this.BtnAddpipe.Name = "BtnAddpipe";
             this.BtnAddpipe.Size = new System.Drawing.Size(172, 49);
+=======
+            this.BtnAddpipe.Location = new System.Drawing.Point(2, 36);
+            this.BtnAddpipe.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAddpipe.Name = "BtnAddpipe";
+            this.BtnAddpipe.Size = new System.Drawing.Size(115, 32);
+>>>>>>> origin/master
             this.BtnAddpipe.TabIndex = 2;
             this.BtnAddpipe.Text = "Pipe";
             this.BtnAddpipe.UseVisualStyleBackColor = false;
@@ -137,7 +179,12 @@
             this.SaveButton.BackColor = System.Drawing.Color.LightSlateGray;
             this.SaveButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.SaveButton.Location = new System.Drawing.Point(4, 492);
+=======
+            this.SaveButton.Location = new System.Drawing.Point(3, 320);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> origin/master
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(172, 49);
             this.SaveButton.TabIndex = 1;
@@ -150,7 +197,12 @@
             this.LoadButton.BackColor = System.Drawing.Color.LightSlateGray;
             this.LoadButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.LoadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.LoadButton.Location = new System.Drawing.Point(4, 548);
+=======
+            this.LoadButton.Location = new System.Drawing.Point(3, 356);
+            this.LoadButton.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> origin/master
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(172, 49);
             this.LoadButton.TabIndex = 0;
@@ -160,11 +212,21 @@
             // 
             // GridPanel
             // 
+<<<<<<< HEAD
             this.GridPanel.BackColor = System.Drawing.Color.White;
             this.GridPanel.Location = new System.Drawing.Point(208, 31);
+=======
+            this.GridPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GridPanel.Location = new System.Drawing.Point(142, 20);
+            this.GridPanel.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> origin/master
             this.GridPanel.Name = "GridPanel";
             this.GridPanel.Size = new System.Drawing.Size(600, 600);
             this.GridPanel.TabIndex = 1;
+<<<<<<< HEAD
+=======
+            this.GridPanel.Click += new System.EventHandler(this.GridPanel_Click);
+>>>>>>> origin/master
             this.GridPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.GridPanel_Paint);
             // 
             // contextMenuStrip1
