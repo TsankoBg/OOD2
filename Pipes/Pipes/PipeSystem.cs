@@ -64,6 +64,7 @@ namespace Pipes
                 {
                     if(showsave != null)
                     {
+                        //event rised if alterSinceSave turns to false
                         showsave(alterSinceSave);
                     }
                 }
@@ -73,7 +74,7 @@ namespace Pipes
         // Methods
         public void addComponent( Component x)
         {
-           // Components = new List<Component>();
+           
             Components.Add(x);
            
         }

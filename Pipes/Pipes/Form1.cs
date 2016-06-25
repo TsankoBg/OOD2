@@ -22,11 +22,9 @@ namespace Pipes
             InitializeComponent();
             system.showsave += allowSave;
             system.saveload = new SaveLoad();
-//<<<<<<< HEAD
             system.grid = new Grid(GridPanel, system.CurrentXsize);
-//=======
+
             p = new PointP();
-//>>>>>>> origin/master
             //When the SaveSinceLast is at anypoint turned to false,
             //an event will rise not allowing the Save Button to be clicked
         }

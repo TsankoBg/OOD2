@@ -31,6 +31,7 @@ namespace Pipes
 
         public override void AttachComponent(Component output)
         {
+
             this.OutputA = output;
         }
 

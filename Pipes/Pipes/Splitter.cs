@@ -32,6 +32,18 @@ namespace Pipes
             if (OutputA != null) OutputA.SetFlow(Ratio * Flow);
             if (OutputB != null) OutputB.SetFlow((100 - Ratio) * Flow);
         }
-       
+        public override void AttachComponent(Component output)
+        {
+
+            if(OutputA == null)
+            {
+                this.OutputA = output;
+            }
+            else
+            {
+                this.OutputB = output;
+            }
+        }
+
     }
 }
