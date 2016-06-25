@@ -10,8 +10,8 @@ namespace Pipes
     class Pipe : Component
     {
         // a pipe has an input and an output
-        Component InputA { get; set; }
-        Component OutputA { get; set; }
+       public Component InputA { get; set; }
+       public Component OutputA { get; set; }
 
         private int safetyLimit;
         private int SafetyLimit
