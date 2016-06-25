@@ -59,11 +59,11 @@ namespace Pipes
         }
         public PointP returnMousePosition(Point mousePosition)
         {
-            PointP gridSpace = null;
+            PointP gridSpace = new PointP();
             gridSpace.X = Convert.ToSingle(mousePosition.X / xSpace);
             gridSpace.Y = Convert.ToSingle(mousePosition.Y / ySpace);
-            Math.Floor(gridSpace.X);
-            Math.Floor(gridSpace.Y);
+            gridSpace.X = (float)Math.Floor(gridSpace.X);
+            gridSpace.Y = (float)Math.Floor(gridSpace.Y);
             return gridSpace;
         }
        /* public bool enlarge()

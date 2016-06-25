@@ -269,7 +269,9 @@ namespace Pipes
         {
             //When Clicked in the Panel selectedComponent will be selected based on grid space
             PointP position = new PointP();
-            position = system.grid.returnMousePosition(MousePosition);
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
             foreach(var y in system.Components)
             {
                 if(y.location == position)
