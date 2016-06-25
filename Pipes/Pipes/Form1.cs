@@ -261,15 +261,25 @@ namespace Pipes
             }
            
             
-//=======
+
 
         }
 
         private void GridPanel_Click(object sender, EventArgs e)
         {
-            p.X = MousePosition.X;
-            p.Y = MousePosition.Y;
-//>>>>>>> origin/master
+            //When Clicked in the Panel selectedComponent will be selected based on grid space
+            PointP position = new PointP();
+            position = system.grid.returnMousePosition(MousePosition);
+            foreach(var y in system.Components)
+            {
+                if(y.location == position)
+                {
+                    system.selectedComponent = y;
+                    return;
+                }
+            }
+            
+
         }
 
         private void contextMenuStrip1_Opened(object sender, EventArgs e)

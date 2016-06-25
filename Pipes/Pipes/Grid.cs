@@ -57,7 +57,7 @@ namespace Pipes
             }
 
         }
-        PointP returnMousePosition(Point mousePosition)
+        public PointP returnMousePosition(Point mousePosition)
         {
             PointP gridSpace = null;
             gridSpace.X = Convert.ToSingle(mousePosition.X / xSpace);
