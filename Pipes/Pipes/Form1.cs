@@ -106,7 +106,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location==position)
+                if (c.location.X ==position.X & c.location.Y==position.Y)
                 {
 
 
@@ -228,7 +228,7 @@ namespace Pipes
         private void BtnAddpipe_Click(object sender, EventArgs e)
         {
             
-            system.addComponent(system.selectedComponent);
+            system.addComponent(new Pipe(p));
         }
 
         private void BtnSplitter_Click(object sender, EventArgs e)
@@ -275,15 +275,15 @@ namespace Pipes
             PointP position = new PointP();
             Point point = GridPanel.PointToClient(Cursor.Position);
             //mouse position is relative to panel 
-            position = system.grid.returnMousePosition(point);
-            foreach(var y in system.Components)
-            {
-                if(y.location == position)
-                {
-                    system.selectedComponent = y;
-                    return;
-                }
-            }
+            p = system.grid.returnMousePosition(point);
+            //foreach(var y in system.Components)
+            //{
+            //    if(y.location == position)
+            //    {
+            //        system.selectedComponent = y;
+            //        return;
+            //    }
+            //}
             
 
         }
