@@ -14,6 +14,7 @@ namespace Pipes
         private int currentYsize = 10;
         private bool alterSinceSave = false;
         public Component selectedComponent;
+        public int index;
         public List<Component> Components;
         public SaveLoad saveload;
         public Grid grid;

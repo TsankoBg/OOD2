@@ -14,7 +14,8 @@ namespace Pipes
     {
         PipeSystem system = new PipeSystem();
         PointP p;
-
+        Selection selector = Selection.Add;
+        //Component selectedComponent = null;
 
         public Form1()
         {
@@ -24,6 +25,8 @@ namespace Pipes
             system.saveload = new SaveLoad();
             system.grid = new Grid(GridPanel, system.CurrentXsize);
             system.drawTheComponent += drawComponent;
+
+            
 
             p = new PointP();
             //When the SaveSinceLast is at anypoint turned to false,
@@ -93,14 +96,15 @@ namespace Pipes
             RightClickDelete.Enabled = false;
             RightClickChange.Enabled = false;
 
-
+            int x = -1;
             foreach (Component c in system.Components)
             {
+                x++;
                 // checks if  a component with the current location exists
                 if (c.location.X == position.X && c.location.Y == position.Y)
                 {
-
-
+                    system.index = x;
+                    //system.selectedComponent = c;
                     //  toolStripMenuItem1.HideDropDown();
                     if (c is Pipe)
                     {
@@ -251,14 +255,77 @@ namespace Pipes
             Point point = GridPanel.PointToClient(Cursor.Position);
             //mouse position is relative to panel 
             p = system.grid.returnMousePosition(point);
-            //foreach(var y in system.Components)
-            //{
-            //    if(y.location == position)
-            //    {
-            //        system.selectedComponent = y;
-            //        return;
-            //    }
-            //}
+
+            switch (selector)
+            {
+                case Selection.Add:
+                    {
+                       return;
+                    }
+                case Selection.InputA:
+                    {
+                        foreach (Component c in system.Components)
+                        {
+                            // checks if  a component with the current location exists
+                            if (c.location.X == position.X && c.location.Y == position.Y)
+                            {
+                                // parameter neeed to be assignet 
+                                system.Components[system.index].attachInputA(c);
+                                
+                            }
+                        }
+                        selector = Selection.Add;
+                            return;
+                    }
+                    
+                case Selection.InputB:
+                    {
+                        foreach (Component c in system.Components)
+                        {
+                            // checks if  a component with the current location exists
+                            if (c.location.X == position.X && c.location.Y == position.Y)
+                            {
+                                // parameter neeed to be assignet 
+                                system.Components[system.index].attachInputB(c);
+
+                            }
+                        }
+                        selector = Selection.Add;
+                        return;
+                    }
+                case Selection.OutputA:
+                    {
+                        foreach (Component c in system.Components)
+                        {
+                            // checks if  a component with the current location exists
+                            if (c.location.X == position.X && c.location.Y == position.Y)
+                            {
+                                // parameter neeed to be assignet 
+                                system.Components[system.index].attachOutputA(c);
+
+                            }
+                        }
+                        selector = Selection.Add;
+                        return;
+                    }
+                case Selection.OutputB:
+                    {
+                        foreach (Component c in system.Components)
+                        {
+                            // checks if  a component with the current location exists
+                            if (c.location.X == position.X && c.location.Y == position.Y)
+                            {
+                                // parameter neeed to be assignet 
+                                system.Components[system.index].attachOutputB(c);
+
+                            }
+                        }
+                        selector = Selection.Add;
+                        return;
+                    }
+                default:
+                    return;
+            }
 
 
         }
@@ -340,7 +407,8 @@ namespace Pipes
                 if (c.location.X == position.X && c.location.Y == position.Y)
                 {
                     // parameter neeed to be assignet 
-                    c.attachOutputA(c);
+                    //selectedComponent = c;
+                    selector = Selection.OutputA;
                 }
             }
         }
@@ -357,7 +425,7 @@ namespace Pipes
                 if (c.location.X == position.X && c.location.Y == position.Y)
                 {
                     // parameter neeed to be assignet 
-                    c.attachOutputB(c);
+                    selector = Selection.OutputB;
                 }
             }
         }
@@ -373,7 +441,7 @@ namespace Pipes
                 if (c.location.X == position.X && c.location.Y == position.Y)
                 {
                     // parameter neeed to be assignet 
-                    c.attachInputB(c);
+                    selector = Selection.InputB;
                 }
             }
         }
@@ -389,8 +457,10 @@ namespace Pipes
                 // checks if  a component with the current location exists
                 if (c.location.X == position.X && c.location.Y == position.Y)
                 {
+                    //Point b = new Point()
                     // parameter neeed to be assignet 
-                    c.attachInputA(c);
+                    //c.attachInputA(c);
+                    selector = Selection.InputA;
                 }
             }
         }
