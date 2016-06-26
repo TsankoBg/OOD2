@@ -329,27 +329,67 @@ namespace Pipes
 
         private void RightClickOutputA_Click(object sender, EventArgs e)
         {
-
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == position.X & c.location.Y == position.Y)
+                {
+                    // parameter neeed to be assignet 
+                    c.attachOutputA(c);
+                }
+            }
         }
 
         private void RightClickOutputB_Click(object sender, EventArgs e)
         {
-
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == position.X & c.location.Y == position.Y)
+                {
+                    // parameter neeed to be assignet 
+                    c.attachOutputB(c);
+                }
+            }
         }
         private void RightClickInputB_Click(object sender, EventArgs e)
         {
-
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == position.X & c.location.Y == position.Y)
+                {
+                    // parameter neeed to be assignet 
+                    c.attachInputB(c);
+                }
+            }
         }
 
         private void RightClickInputA_Click(object sender, EventArgs e)
         {
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+               if (c.location.X ==position.X & c.location.Y==position.Y)
                 {
                     // parameter neeed to be assignet 
-                    c.attachInputA(system.selectedComponent);
+                    c.attachInputA(c);
                 }
             }
         }
@@ -380,5 +420,19 @@ namespace Pipes
                 }
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+                {
+                    if(c is Pipe)
+                    {
+                        c.SetSafetyLimit(Convert.ToInt32(textBox1.Text));
+                    }
+                }}
+            }
     }
 }
