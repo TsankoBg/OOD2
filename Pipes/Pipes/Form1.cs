@@ -14,7 +14,7 @@ namespace Pipes
     {
         PipeSystem system = new PipeSystem();
         PointP p;
-        
+
 
         public Form1()
         {
@@ -56,23 +56,23 @@ namespace Pipes
         private void LoadButton_Click(object sender, EventArgs e)
         {
             if (system.AlterSinceSave == false)
-            { 
+            {
                 DialogResult result = new DialogResult();
                 result = MessageBox.Show(this, "Warning, If you load current data will be overwritten", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 if (result == DialogResult.OK)
                 {
-                    
-                        system.saveload.load();
+
+                    system.saveload.load();
                 }
             }
             else
             {
-                
+
                 system.saveload.load();
             }
         }
 
-        
+
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
@@ -97,7 +97,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X ==position.X & c.location.Y==position.Y)
+                if (c.location.X == position.X && c.location.Y == position.Y)
                 {
 
 
@@ -118,7 +118,7 @@ namespace Pipes
                         RightClickDelete.Enabled = true;
 
                     }
-                   else if(c is Pump)
+                    else if (c is Pump)
                     {
 
 
@@ -160,12 +160,12 @@ namespace Pipes
                         RightClickInputA.Enabled = true;
                         RightClickInputB.Enabled = false;
                         RightClickOutputA.Enabled = true;
-                        RightClickOutputB.Enabled =true;
+                        RightClickOutputB.Enabled = true;
                         RightClickChange.Enabled = true;
                         RightClickDelete.Enabled = true;
 
                     }
-                    else if ( c is Sink)
+                    else if (c is Sink)
                     {
                         //RightClickInputA.Visible = true;
 
@@ -175,64 +175,64 @@ namespace Pipes
                         //RightClickDelete.Visible = true;
                         RightClickInputA.Enabled = true;
                         RightClickInputB.Enabled = false;
-                        RightClickOutputA.Enabled =false;
+                        RightClickOutputA.Enabled = false;
                         RightClickOutputB.Enabled = false;
                         RightClickChange.Enabled = true;
                         RightClickDelete.Enabled = true;
                     }
-                   
+
                 }
 
             }
         }
 
-        
 
-        
 
-        
+
+
+
 
         private void BtnAddpipe_Click(object sender, EventArgs e)
         {
-            
+
             system.addComponent(new Pipe(p));
         }
 
         private void BtnSplitter_Click(object sender, EventArgs e)
         {
-           
+
             system.addComponent(new Splitter(p));
         }
 
         private void BtnMerger_Click(object sender, EventArgs e)
         {
-            
+
             system.addComponent(new Merger(p));
         }
 
         private void BtnPump_Click(object sender, EventArgs e)
         {
-           
+
             system.addComponent(new Pump(p));
         }
 
         private void BtnSink_Click(object sender, EventArgs e)
         {
-           
+
             system.addComponent(new Sink(p));
         }
 
         private void GridPanel_Paint(object sender, PaintEventArgs e)
         {
-//<<<<<<< HEAD
+            //<<<<<<< HEAD
             base.OnPaint(e);
             using (Graphics g = e.Graphics)
             {
                 system.grid.drawGrid(g, system.CurrentXsize);
-                
+
             }
-           
-            
+
+
 
 
         }
@@ -259,10 +259,10 @@ namespace Pipes
             //        return;
             //    }
             //}
-            
+
 
         }
-     
+
 
         private void contextMenuStrip1_Opened(object sender, EventArgs e)
         {
@@ -285,7 +285,7 @@ namespace Pipes
                 foreach (Component c in system.Components)
                 {
                     // checks if  a component with the current location exists
-                    if (c.location==position)
+                    if (c.location == position)
                     {
 
                         c.SetFlow(flow);
@@ -293,9 +293,10 @@ namespace Pipes
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("error: " + ex.Message);            }
+                MessageBox.Show("error: " + ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -329,27 +330,67 @@ namespace Pipes
 
         private void RightClickOutputA_Click(object sender, EventArgs e)
         {
-
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == position.X && c.location.Y == position.Y)
+                {
+                    // parameter neeed to be assignet 
+                    c.attachOutputA(c);
+                }
+            }
         }
 
         private void RightClickOutputB_Click(object sender, EventArgs e)
         {
-
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == position.X && c.location.Y == position.Y)
+                {
+                    // parameter neeed to be assignet 
+                    c.attachOutputB(c);
+                }
+            }
         }
         private void RightClickInputB_Click(object sender, EventArgs e)
         {
-
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == position.X && c.location.Y == position.Y)
+                {
+                    // parameter neeed to be assignet 
+                    c.attachInputB(c);
+                }
+            }
         }
 
         private void RightClickInputA_Click(object sender, EventArgs e)
         {
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+                if (c.location.X == position.X && c.location.Y == position.Y)
                 {
                     // parameter neeed to be assignet 
-                    c.attachInputA(system.selectedComponent);
+                    c.attachInputA(c);
                 }
             }
         }
@@ -358,7 +399,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+                if (c.location.X == MousePosition.X && c.location.Y == MousePosition.Y)
                 {
                     // parameter neeed to be assignet 
                     system.MOdifyComponent(c);
@@ -370,12 +411,27 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+                if (c.location.X == MousePosition.X && c.location.Y == MousePosition.Y)
                 {
                     using (Graphics g = GridPanel.CreateGraphics())
                     {
 
                         system.removeComponent(c, g);
+                    }
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == MousePosition.X && c.location.Y == MousePosition.Y)
+                {
+                    if (c is Pipe)
+                    {
+                        c.SetSafetyLimit(Convert.ToInt32(textBox1.Text));
                     }
                 }
             }
