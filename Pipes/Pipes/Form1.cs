@@ -314,21 +314,27 @@ namespace Pipes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int flow = Convert.ToInt32(textBox1.Text);
-            PointP position = new PointP();
-            Point point = GridPanel.PointToClient(Cursor.Position);
-            //mouse position is relative to panel 
-            position = system.grid.returnMousePosition(point);
-            foreach (Component c in system.Components)
+            try
             {
-                // checks if  a component with the current location exists
-                if (c.location.X == position.X & c.location.Y == position.Y)
+                int flow = Convert.ToInt32(textBox1.Text);
+                PointP position = new PointP();
+                Point point = GridPanel.PointToClient(Cursor.Position);
+                //mouse position is relative to panel 
+                position = system.grid.returnMousePosition(point);
+                foreach (Component c in system.Components)
                 {
-                    
-                      c.SetFlow(flow);
-                    
+                    // checks if  a component with the current location exists
+                    if (c.location==position)
+                    {
+
+                        c.SetFlow(flow);
+
+                    }
                 }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show("error: " + ex.Message);            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -340,7 +346,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == position.X & c.location.Y == position.Y)
+                if (c.location == position)
                 {
                     label2.Text = c.Flow.ToString();
                 }
