@@ -85,6 +85,10 @@ namespace Pipes
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
             //RightClickInputA.Visible = false;
             //RightClickInputB.Visible = false;
             //RightClickOutputA.Visible = false;
@@ -102,7 +106,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X==MousePosition.X & c.location.Y==MousePosition.Y)
+                if (c.location.X ==position.X & c.location.Y==position.Y)
                 {
 
 
@@ -271,15 +275,15 @@ namespace Pipes
             PointP position = new PointP();
             Point point = GridPanel.PointToClient(Cursor.Position);
             //mouse position is relative to panel 
-            position = system.grid.returnMousePosition(point);
-            foreach(var y in system.Components)
-            {
-                if(y.location == position)
-                {
-                    system.selectedComponent = y;
-                    return;
-                }
-            }
+            p = system.grid.returnMousePosition(point);
+            //foreach(var y in system.Components)
+            //{
+            //    if(y.location == position)
+            //    {
+            //        system.selectedComponent = y;
+            //        return;
+            //    }
+            //}
             
 
         }
