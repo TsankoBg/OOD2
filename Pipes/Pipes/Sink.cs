@@ -10,7 +10,7 @@ namespace Pipes
 {
     class Sink : Component
     {
-        Component Input { get; set; }
+        Component InputA { get; set; }
         
 
         public Sink(PointP loc) : base(loc)

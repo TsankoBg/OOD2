@@ -64,8 +64,6 @@ namespace Pipes
         public bool RemovePipes()
         {
 
-
-
             return false;
 
         }
@@ -75,6 +73,23 @@ namespace Pipes
         }
 
         public virtual void SetSafetyLimit(int x)
+        {
+
+        }
+
+        public virtual void attachInputA(Component x)
+        {
+
+        }
+        public virtual void attachInputB(Component x)
+        {
+
+        }
+        public virtual void attachOutputA(Component x)
+        {
+
+        }
+        public virtual void attachOutputB(Component x)
         {
 
         }

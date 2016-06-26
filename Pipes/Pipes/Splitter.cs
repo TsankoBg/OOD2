@@ -9,7 +9,7 @@ namespace Pipes
 {
     class Splitter : Component
     {
-       public Component inPutA { get; set; }
+       public Component InputA { get; set; }
         Component OutputA { get; set; }
         Component OutputB { get; set; }
         public int Ratio { get; set; }
