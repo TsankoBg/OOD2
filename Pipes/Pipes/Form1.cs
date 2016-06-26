@@ -352,7 +352,7 @@ namespace Pipes
                 foreach (Component c in system.Components)
                 {
                     // checks if  a component with the current location exists
-                    if (c.location == position)
+                    if (c.location.X == p.X && c.location.Y == p.Y)
                     {
 
                         c.SetFlow(flow);
@@ -375,7 +375,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location == position)
+                if (c.location.X == p.X && c.location.Y==p.Y)
                 {
                     label2.Text = c.Flow.ToString();
                 }
