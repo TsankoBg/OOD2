@@ -11,8 +11,8 @@ namespace Pipes
     {
         
 
-        Component InputA { get; set; }
-        Component InputB { get; set; }
+        public Component InputA { get; set; }
+        public Component InputB { get; set; }
         public Component OutputA { get; set; }
 
 
@@ -29,11 +29,32 @@ namespace Pipes
             if (OutputA != null) OutputA.SetFlow(Flow);
         }
 
-        public override void AttachComponent(Component output)
-        {
+        
 
-            this.OutputA = output;
+        public override void attachOutputA(Component x)
+        {
+            if ((x is Pipe) && (((Pipe)x).InputA == null))
+            {
+                this.OutputA = x;
+                ((Pipe)x).InputA = this;
+            }
         }
 
+        public override void attachInputA(Component x)
+        {
+            if ((x is Pipe) && (((Pipe)x).OutputA == null))
+            {
+                this.InputA = x;
+                ((Pipe)x).OutputA = this;
+            }
+        }
+        public override void attachInputB(Component x)
+        {
+            if ((x is Pipe) && (((Pipe)x).OutputA == null))
+            {
+                this.InputA = x;
+                ((Pipe)x).OutputA = this;
+            }
+        }
     }
 }

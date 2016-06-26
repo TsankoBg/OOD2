@@ -10,12 +10,20 @@ namespace Pipes
 {
     class Sink : Component
     {
-        Component InputA { get; set; }
+        public Component InputA { get; set; }
         
 
         public Sink(PointP loc) : base(loc)
         {
             
+        }
+        public override void attachInputA(Component x)
+        {
+            if ((x is Pipe) && (((Pipe)x).OutputA == null))
+            {
+                this.InputA = x;
+                ((Pipe)x).OutputA = this;
+            }
         }
     }
 }

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ToolPanel = new System.Windows.Forms.Panel();
+            this.btnAddFlow = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.BtnSink = new System.Windows.Forms.Button();
             this.BtnPump = new System.Windows.Forms.Button();
             this.BtnMerger = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@
             this.RightClickOutputB = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickChange = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnAddFlow = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.showflow = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,6 +74,28 @@
             this.ToolPanel.Name = "ToolPanel";
             this.ToolPanel.Size = new System.Drawing.Size(80, 253);
             this.ToolPanel.TabIndex = 0;
+            // 
+            // btnAddFlow
+            // 
+            this.btnAddFlow.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAddFlow.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAddFlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFlow.Location = new System.Drawing.Point(0, 148);
+            this.btnAddFlow.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAddFlow.Name = "btnAddFlow";
+            this.btnAddFlow.Size = new System.Drawing.Size(77, 21);
+            this.btnAddFlow.TabIndex = 8;
+            this.btnAddFlow.Text = "Set Flow";
+            this.btnAddFlow.UseVisualStyleBackColor = false;
+            this.btnAddFlow.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 173);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(49, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // BtnSink
             // 
@@ -205,26 +227,28 @@
             this.RightClickInputA.Name = "RightClickInputA";
             this.RightClickInputA.Size = new System.Drawing.Size(145, 22);
             this.RightClickInputA.Text = "Add InputA";
-            this.RightClickInputA.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.RightClickInputA.Click += new System.EventHandler(this.RightClickInputA_Click);
             // 
             // RightClickInputB
             // 
             this.RightClickInputB.Name = "RightClickInputB";
             this.RightClickInputB.Size = new System.Drawing.Size(145, 22);
             this.RightClickInputB.Text = "Add Input B";
-            this.RightClickInputB.Click += new System.EventHandler(this.addOutputAToolStripMenuItem_Click);
+            this.RightClickInputB.Click += new System.EventHandler(this.RightClickInputB_Click);
             // 
             // RightClickOutputA
             // 
             this.RightClickOutputA.Name = "RightClickOutputA";
             this.RightClickOutputA.Size = new System.Drawing.Size(145, 22);
             this.RightClickOutputA.Text = "Add OutputA";
+            this.RightClickOutputA.Click += new System.EventHandler(this.RightClickOutputA_Click);
             // 
             // RightClickOutputB
             // 
             this.RightClickOutputB.Name = "RightClickOutputB";
             this.RightClickOutputB.Size = new System.Drawing.Size(145, 22);
             this.RightClickOutputB.Text = "Add OutPutB";
+            this.RightClickOutputB.Click += new System.EventHandler(this.RightClickOutputB_Click);
             // 
             // RightClickChange
             // 
@@ -239,28 +263,6 @@
             this.RightClickDelete.Size = new System.Drawing.Size(145, 22);
             this.RightClickDelete.Text = "Delete";
             this.RightClickDelete.Click += new System.EventHandler(this.RightClickDelete_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(49, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // btnAddFlow
-            // 
-            this.btnAddFlow.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnAddFlow.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAddFlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFlow.Location = new System.Drawing.Point(0, 148);
-            this.btnAddFlow.Margin = new System.Windows.Forms.Padding(1);
-            this.btnAddFlow.Name = "btnAddFlow";
-            this.btnAddFlow.Size = new System.Drawing.Size(77, 21);
-            this.btnAddFlow.TabIndex = 8;
-            this.btnAddFlow.Text = "Set Flow";
-            this.btnAddFlow.UseVisualStyleBackColor = false;
-            this.btnAddFlow.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 

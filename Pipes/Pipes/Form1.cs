@@ -72,18 +72,7 @@ namespace Pipes
             }
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            foreach (Component c in system.Components)
-            {
-                // checks if  a component with the current location exists
-                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
-                {
-                    // parameter neeed to be assignet 
-                    c.AttachComponent(system.selectedComponent);
-                }
-            }
-        }
+        
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
@@ -197,39 +186,11 @@ namespace Pipes
             }
         }
 
-        private void addOutputAToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        
 
-        }
+        
 
-        private void RightClickDelete_Click(object sender, EventArgs e)
-        {
-            foreach (Component c in system.Components)
-            {
-                // checks if  a component with the current location exists
-                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
-                {
-                    using (Graphics g = GridPanel.CreateGraphics())
-                    {
-                        
-                        system.removePipes(c,g);
-                    }
-                }
-            }
-        }
-
-        private void RightClickChange_Click(object sender, EventArgs e)
-        {
-            foreach (Component c in system.Components)
-            {
-                // checks if  a component with the current location exists
-                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
-                {
-                    // parameter neeed to be assignet 
-                    system.MOdifyComponent(c);
-                }
-            }
-        }
+        
 
         private void BtnAddpipe_Click(object sender, EventArgs e)
         {
@@ -356,6 +317,68 @@ namespace Pipes
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        /*
+        ------------------------------------------------------------------
+            Right click context menu
+        ------------------------------------------------------------------
+        */
+
+
+
+        private void RightClickOutputA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RightClickOutputB_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void RightClickInputB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RightClickInputA_Click(object sender, EventArgs e)
+        {
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+                {
+                    // parameter neeed to be assignet 
+                    c.attachInputA(system.selectedComponent);
+                }
+            }
+        }
+        private void RightClickChange_Click(object sender, EventArgs e)
+        {
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+                {
+                    // parameter neeed to be assignet 
+                    system.MOdifyComponent(c);
+                }
+            }
+        }
+        private void RightClickDelete_Click(object sender, EventArgs e)
+        {
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
+                {
+                    using (Graphics g = GridPanel.CreateGraphics())
+                    {
+
+                        system.removePipes(c, g);
+                    }
+                }
+            }
         }
     }
 }

@@ -9,9 +9,9 @@ namespace Pipes
 {
     class Splitter : Component
     {
-       public Component InputA { get; set; }
-        Component OutputA { get; set; }
-        Component OutputB { get; set; }
+        public Component InputA { get; set; }
+        public Component OutputA { get; set; }
+        public Component OutputB { get; set; }
         public int Ratio { get; set; }
 
         public Splitter(PointP loc) : base(loc)
@@ -32,18 +32,32 @@ namespace Pipes
             if (OutputA != null) OutputA.SetFlow(Ratio * Flow);
             if (OutputB != null) OutputB.SetFlow((100 - Ratio) * Flow);
         }
-        public override void AttachComponent(Component output)
+        
+        public override void attachInputA(Component x)
         {
-
-            if(OutputA == null)
+            if ((x is Pipe) && (((Pipe)x).OutputA == null))
             {
-                this.OutputA = output;
-            }
-            else
-            {
-                this.OutputB = output;
+                this.InputA = x;
+                ((Pipe)x).OutputA = this;
             }
         }
+        public override void attachOutputA(Component x)
+        {
+            if ((x is Pipe) && (((Pipe)x).InputA == null))
+            {
+                this.OutputA = x;
+                ((Pipe)x).InputA = this;
+            }
+        }
+        public override void attachOutputB(Component x)
+        {
+            if ((x is Pipe) && (((Pipe)x).InputA == null))
+            {
+                this.OutputB = x;
+                ((Pipe)x).InputA = this;
+            }
+        }
+
 
     }
 }

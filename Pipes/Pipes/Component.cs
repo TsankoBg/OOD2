@@ -56,11 +56,7 @@ namespace Pipes
         //    return -1;
         //}
 
-        public virtual void AttachComponent(Component current)
-        {
-
-         
-        }
+        
         public bool RemovePipes()
         {
 
