@@ -58,12 +58,24 @@ namespace Pipes
         }
         public int checkSystemFlow()
         {
-            return 0;
-            //If false
-            return 1;
             //return if true
-            return -1;
+            if (Flow < safetyLimit)
+            {
+                return 1;
+
+            }
+            //If false
+            else if (Flow >= SafetyLimit)
+            {
+                return 0;
+            }
+
             //return if system not complete
+            else
+            {
+                return -1;
+            }
+           
         }
         
     }
