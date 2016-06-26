@@ -81,10 +81,22 @@ namespace Pipes
                 {
                     graphic.DrawImage(img, rect);
                 }
+                
             }
+        }
+        public void unDrawComponent(Component component,Graphics graphic)
+        {
+            Brush brush = new SolidBrush(Color.FromArgb(224, 224, 224));
+            int x = Convert.ToInt32(component.location.X * xSpace);
+            int y = Convert.ToInt32(component.location.Y * ySpace);
+            int w = Convert.ToInt32(xSpace);
+            int h = Convert.ToInt32(ySpace);
 
+            Rectangle rect = new Rectangle(x, y, w, h);
+            graphic.FillRectangle(brush, rect);
 
         }
+       
         private bool getImage(Component component, out Image img)
         {
             if (component != null)
@@ -93,7 +105,10 @@ namespace Pipes
                 {
                     PointP next = new PointP();
                     PointP previous = new PointP();
-
+                    if(((Pipe)component).InputA == null){
+                        img = Pipes.Properties.Resources.RedHorizontalPipe;
+                        return true;
+                    }
                     previous = ((Pipe)component).InputA.location;
 
                     PointP test = new PointP();

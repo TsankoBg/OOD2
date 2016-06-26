@@ -14,7 +14,9 @@ namespace Pipes
     {
 
      public   PointP location;
-        private int flow;
+     private int flow;
+
+     
         public int Flow
         {
             get
@@ -25,6 +27,7 @@ namespace Pipes
             set
             {
                 flow = value;
+                
             }
         }
         

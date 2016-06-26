@@ -19,6 +19,8 @@ namespace Pipes
         public Grid grid;
         public delegate void ShowSaveButton(bool ShowifSaved);
         public event ShowSaveButton showsave;
+        public delegate void TriggerDraw(Component component);
+        public event TriggerDraw drawTheComponent;
         PointP p; // for testing right click
 
         public PipeSystem()
@@ -76,14 +78,26 @@ namespace Pipes
         {
            
             Components.Add(x);
+            if(AlterSinceSave == false)
+            {
+                AlterSinceSave = true;
+            }
+            if(drawTheComponent != null)
+            {
+                drawTheComponent(x);
+            }
            
         }
         /// <summary>
         /// removes the pipe
         /// </summary>
         /// <returns></returns>
-        public bool removePipes()
+        public bool removePipes(Graphics graphic)
         {
+            Component componentToRemove;
+            //componentToRemove just an example 
+            grid.unDrawComponent(componentToRemove, graphic);
+            //then delete the component
             return true;
         }
         /// <summary>
@@ -96,9 +110,16 @@ namespace Pipes
         //    return Point locaiton;
         //}
 
-        public void MOdifyComponent(int x)
+        public void MOdifyComponent(Component component)
         {
-
+            if (AlterSinceSave == false)
+            {
+                AlterSinceSave = true;
+            }
+            if (drawTheComponent != null)
+            {
+                drawTheComponent(component);
+            }
         }
         
 

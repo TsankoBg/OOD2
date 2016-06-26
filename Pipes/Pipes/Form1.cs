@@ -23,6 +23,7 @@ namespace Pipes
             system.showsave += allowSave;
             system.saveload = new SaveLoad();
             system.grid = new Grid(GridPanel, system.CurrentXsize);
+            system.drawTheComponent += drawComponent;
 
             p = new PointP();
             //When the SaveSinceLast is at anypoint turned to false,
@@ -38,6 +39,7 @@ namespace Pipes
         {
 
             system.saveload.save(system.Components);
+            system.AlterSinceSave = false;
         }
         void allowSave(bool showSave)
         {
@@ -207,7 +209,11 @@ namespace Pipes
                 // checks if  a component with the current location exists
                 if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
                 {
-                    system.removePipes();
+                    using (Graphics g = GridPanel.CreateGraphics())
+                    {
+                        
+                        system.removePipes(g);
+                    }
                 }
             }
         }
@@ -262,11 +268,19 @@ namespace Pipes
             using (Graphics g = e.Graphics)
             {
                 system.grid.drawGrid(g, system.CurrentXsize);
+                
             }
            
             
 
 
+        }
+        private void drawComponent(Component component)
+        {
+            using (Graphics g = GridPanel.CreateGraphics())
+            {
+                system.grid.drawComponent(component, g);
+            }
         }
 
         private void GridPanel_Click(object sender, EventArgs e)
@@ -287,6 +301,7 @@ namespace Pipes
             
 
         }
+     
 
         private void contextMenuStrip1_Opened(object sender, EventArgs e)
         {
