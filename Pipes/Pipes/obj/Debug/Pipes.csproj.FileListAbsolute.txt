@@ -17,3 +17,10 @@ C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.Properties.Resourc
 C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.csproj.GenerateResource.Cache
 C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe
 C:\Users\Dyer\Documents\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.pdb
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe.config
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.exe
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.pdb
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.csprojResolveAssemblyReference.cache
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.Form1.resources
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.Properties.Resources.resources
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.csproj.GenerateResource.Cache

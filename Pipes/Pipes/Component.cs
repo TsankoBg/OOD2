@@ -73,5 +73,10 @@ namespace Pipes
         {
 
         }
+
+        public virtual void SetSafetyLimit(int x)
+        {
+
+        }
     }
 }

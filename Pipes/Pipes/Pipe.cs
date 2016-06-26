@@ -42,10 +42,28 @@ namespace Pipes
         /// sets the safety limit to the given value 
         /// </summary>
         /// <param name="limit"></param>
-        public void SetSafetyLimit(int limit)
+        public override void SetSafetyLimit(int limit)
         {
-
             this.SafetyLimit = limit;
+
+            if (OutputA is Pipe)
+            {
+                Pipe temp = (Pipe)OutputA;
+                if (temp.GetSafetyLimit()!=limit)
+                {
+                    OutputA.SetSafetyLimit(limit);
+                }
+            }
+
+            if (InputA is Pipe)
+            {
+                Pipe temp = (Pipe)InputA;
+                if (temp.GetSafetyLimit() != limit)
+                {
+                    InputA.SetSafetyLimit(limit);
+                }
+            }
+
         }
         public override void SetFlow(int x)
         {
