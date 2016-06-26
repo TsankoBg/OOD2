@@ -61,6 +61,11 @@
     <Compile Include="PointP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Pump.cs" />
     <Compile Include="SaveLoad.cs" />
     <Compile Include="Sink.cs" />
@@ -70,13 +75,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
@@ -153,40 +154,61 @@
     <None Include="Properties\splitterWest.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\verticalRedPipe.png" />
+    <None Include="Properties\EastSpiltter.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedWestSouthPipe.png" />
+    <None Include="Properties\GreenEastNorthPipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedEastSouthPipe.png" />
+    <None Include="Properties\GreenEastSouthPipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedWestNorthPipe.png" />
+    <None Include="Properties\GreenHorizontalPipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedNorthEastPipe.png" />
+    <None Include="Properties\GreenVerticalPipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedHorizontalPipe.png" />
+    <None Include="Properties\GreenWestNorthPipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenVerticalPipe.png" />
+    <None Include="Properties\GreenWestSouthPipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenWestSouthPipe.png" />
+    <None Include="Properties\MergerNorthpng.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenEastSouthPipe.png" />
+    <None Include="Properties\NorthSpiltter.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenWestNorthPipe.png" />
+    <None Include="Properties\NorthWestPipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenEastNorthPipe.png" />
+    <None Include="Properties\RedEastSouthPipe.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\GreenHorizontalPipe.png" />
+    <None Include="Properties\RedHorizontalPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\RedNorthEastPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\RedWestNorthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\RedWestSouthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SouthEastPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\SouthSpiltter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\verticalRedPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\WestSpiltter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

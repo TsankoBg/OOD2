@@ -66,10 +66,9 @@ namespace Pipes
             gridSpace.Y = (float)Math.Floor(gridSpace.Y);
             return gridSpace;
         }
-       /* public bool enlarge()
+        public void drawComponent(Component component, Graphics graphic)
         {
-            int max = 15;
-            if (lines >= max)
+            if (component != null)
             {
                 lines = 15;
                 drawGrid(lines);
@@ -81,23 +80,275 @@ namespace Pipes
                 drawGrid(lines);
                 return true;
             }
+
+
         }
-        public bool lessen()
+        private bool getImage(Component component, out Image img)
         {
-            int min = 6;
-            if (lines <= min)
+            if (component != null)
             {
-                lines = 6;
-                drawGrid(lines);
-                return false;
+                if (component is Pipe)
+                {
+                    PointP next = new PointP();
+                    PointP previous = new PointP();
+
+                    previous = ((Pipe)component).InputA.location;
+
+                    PointP test = new PointP();
+                    PointP test2 = new PointP();
+                    //gets cooridnates of the input and outputs
+                    if (((Pipe)component).OutputA != null)
+                    {
+                        next = ((Pipe)component).OutputA.location;
+                        //pipe has an output
+
+                        test = component.location;
+                        test2 = component.location;
+                        test.X = component.location.X - 1;
+                        test2.X = component.location.X + 1;
+                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        {
+                            //Is horizontal Pipe
+                            switch (((Pipe)component).checkSystemFlow())
+                            {
+                                case 0:
+                                    img = Pipes.Properties.Resources.RedHorizontalPipe;
+                                    break;
+                                case 1:
+                                    img = Pipes.Properties.Resources.GreenHorizontalPipe;
+                                    break;
+                                default:
+                                    img = Pipes.Properties.Resources.HorizontalPipe;
+                                    break;
+                            }
+                            return true;
+                        }
+                        test = component.location;
+                        test2 = component.location;
+                        test.Y = component.location.Y - 1;
+                        test2.Y = component.location.Y + 1;
+                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        {
+                            switch (((Pipe)component).checkSystemFlow())
+                            {
+                                case 0:
+                                    img = Pipes.Properties.Resources.verticalRedPipe;
+                                    break;
+                                case 1:
+                                    img = Pipes.Properties.Resources.GreenVerticalPipe;
+                                    break;
+                                default:
+                                    img = Pipes.Properties.Resources.VerticalPipe;
+                                    break;
+                            }
+                            return true;
+                        }
+
+                        test = component.location;
+                        test2 = component.location;
+                        test.X = component.location.X - 1;
+                        test2.Y = component.location.Y + 1;
+                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        {
+                            switch (((Pipe)component).checkSystemFlow())
+                            {
+                                case 0:
+                                    img = Pipes.Properties.Resources.RedWestSouthPipe;
+                                    break;
+                                case 1:
+                                    img = Pipes.Properties.Resources.GreenWestSouthPipe;
+                                    break;
+                                default:
+                                    img = Pipes.Properties.Resources.WestSouthPipe;
+                                    break;
+                            }
+                            return true;
+                        }
+                        test = component.location;
+                        test2 = component.location;
+                        test.X = component.location.X - 1;
+                        test2.Y = component.location.Y - 1;
+                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        {
+
+                            switch (((Pipe)component).checkSystemFlow())
+                            {
+                                case 0:
+                                    img = Pipes.Properties.Resources.RedWestNorthPipe;
+                                    break;
+                                case 1:
+                                    img = Pipes.Properties.Resources.GreenWestNorthPipe;
+                                    break;
+                                default:
+                                    img = Pipes.Properties.Resources.NorthWestPipe;
+                                    break;
+                            }
+                            return true;
+                        }
+                        test = component.location;
+                        test2 = component.location;
+                        test.X = component.location.X + 1;
+                        test2.Y = component.location.Y - 1;
+                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        {
+                            switch (((Pipe)component).checkSystemFlow())
+                            {
+                                case 0:
+                                    img = Pipes.Properties.Resources.RedNorthEastPipe;
+                                    break;
+                                case 1:
+                                    img = Pipes.Properties.Resources.GreenEastNorthPipe;
+                                    break;
+                                default:
+                                    img = Pipes.Properties.Resources.NorthEastPipe;
+                                    break;
+                            }
+                            return true;
+                        }
+                        test = component.location;
+                        test2 = component.location;
+                        test.X = component.location.X + 1;
+                        test2.Y = component.location.Y + 1;
+                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        {
+                            switch (((Pipe)component).checkSystemFlow())
+                            {
+                                case 0:
+                                    img = Pipes.Properties.Resources.RedEastSouthPipe;
+                                    break;
+                                case 1:
+                                    img = Pipes.Properties.Resources.GreenEastSouthPipe;
+                                    break;
+                                default:
+                                    img = Pipes.Properties.Resources.SouthEastPipe;
+                                    break;
+                            }
+                            return true;
+                        }
+                        img = null;
+                        return false;
+                    }
+                    else
+                    {
+                        //Pipe does not yet have an output
+                        //Therefore can only a horizontal or vertical
+                        test = component.location;
+                        test2 = component.location;
+                        test.Y = component.location.Y - 1;
+                        test2.Y = component.location.Y + 1;
+                        if ((previous == test) || (previous == test2))
+                        {
+                            //test vertical
+                            img = Pipes.Properties.Resources.VerticalPipe;
+                            return true;
+                        }
+                        test = component.location;
+                        test2 = component.location;
+                        test.X = component.location.X - 1;
+                        test2.X = component.location.X + 1;
+                        if ((previous == test) || (previous == test2))
+                        {
+                            //test horizontal
+                            img = Pipes.Properties.Resources.HorizontalPipe;
+                            return true;
+                        }
+                        img = null;
+                        return false;
+                    }
+
+                }
+                else if (component is Sink)
+                {
+                    img = Pipes.Properties.Resources.sink;
+                    return true;
+                }
+                else if (component is Splitter)
+                {
+                    PointP previous = new PointP();
+                    previous = ((Splitter)component).inPutA.location;
+
+                    PointP test = new PointP();
+                    test = component.location;
+                    test.X = component.location.X + 1;
+                    if (test == previous)
+                    {
+                        img = Pipes.Properties.Resources.EastSpiltter;
+                        return true;
+                    }
+                    test = component.location;
+                    test.Y = component.location.Y - 1;
+                    if (test == previous)
+                    {
+                        img = Pipes.Properties.Resources.NorthSpiltter;
+                        return true;
+                    }
+                    test = component.location;
+                    test.Y = component.location.Y + 1;
+                    if (test == previous)
+                    {
+                        img = Pipes.Properties.Resources.SouthSpiltter;
+                        return true;
+                    }
+                    //Must be SpiltterWest Image
+                    img = Pipes.Properties.Resources.SouthSpiltter;
+                    return true;
+                }
+                else if (component is Merger)
+                {
+                    PointP next = new PointP();
+                    if (((Merger)component).location != null)
+                    {
+                        next = ((Merger)component).OutputA.location;
+                        PointP test = new PointP(component.location);
+
+                        test.X = component.location.X + 1;
+                        if (test == next)
+                        {
+                            img = Pipes.Properties.Resources.MergerEast;
+                            return true;
+                        }
+                        test.Y = component.location.Y - 1;
+                        if (test == next)
+                        {
+                            img = Pipes.Properties.Resources.MergerNorthpng;
+                            return true;
+                        }
+                        test.X = component.location.X + 1;
+                        if (test == next)
+                        {
+                            img = Pipes.Properties.Resources.MergerSouth;
+                            return true;
+                        }
+                        //Defeault image
+                        img = Pipes.Properties.Resources.MergerWest;
+                        return true;
+                    }
+                    else
+                    {
+                        //Output not yet determined default image
+                        img = Pipes.Properties.Resources.MergerEast;
+                        return true;
+                    }
+
+
+                }
+                else if (component is Pump)
+                {
+                    img = Pipes.Properties.Resources.pump;
+                    return true;
+                }
+                else
+                {
+                    img = null;
+                    return false;
+                }
             }
             else
             {
-                lines--;
-                drawGrid(lines);
-                return true;
+                img = null;
+                return false;
             }
-        }*/
+        }
 
     }
 }

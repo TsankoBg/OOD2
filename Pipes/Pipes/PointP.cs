@@ -11,9 +11,22 @@ namespace Pipes
         public float X { get; set; }
         public float Y { get; set; }
      
+        
         public PointP()
         {
+            this.X = 0f;
+            this.Y = 0f;
 
+        }
+        public PointP(PointP point)
+        {
+            this.X = point.X;
+            this.Y = point.Y;
+        }
+        public PointP(int x, int y)
+        {
+            this.X = (float)x;
+            this.Y = (float)y;
         }
 
         public PointP(float x , float y)

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Pipes.Properties
-{
-
-
+namespace Pipes.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,59 +22,50 @@ namespace Pipes.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Pipes.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
             }
         }
-<<<<<<< HEAD
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap EastSouthPipe {
+        internal static System.Drawing.Bitmap EastSpiltter {
             get {
-                object obj = ResourceManager.GetObject("EastSouthPipe", resourceCulture);
+                object obj = ResourceManager.GetObject("EastSpiltter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -152,9 +143,9 @@ namespace Pipes.Properties
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mergerEast {
+        internal static System.Drawing.Bitmap MergerEast {
             get {
-                object obj = ResourceManager.GetObject("mergerEast", resourceCulture);
+                object obj = ResourceManager.GetObject("MergerEast", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -162,9 +153,9 @@ namespace Pipes.Properties
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mergerNorth {
+        internal static System.Drawing.Bitmap MergerNorthpng {
             get {
-                object obj = ResourceManager.GetObject("mergerNorth", resourceCulture);
+                object obj = ResourceManager.GetObject("MergerNorthpng", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -172,9 +163,9 @@ namespace Pipes.Properties
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mergerSouth {
+        internal static System.Drawing.Bitmap MergerSouth {
             get {
-                object obj = ResourceManager.GetObject("mergerSouth", resourceCulture);
+                object obj = ResourceManager.GetObject("MergerSouth", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -182,9 +173,9 @@ namespace Pipes.Properties
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mergerWest {
+        internal static System.Drawing.Bitmap MergerWest {
             get {
-                object obj = ResourceManager.GetObject("mergerWest", resourceCulture);
+                object obj = ResourceManager.GetObject("MergerWest", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -195,6 +186,26 @@ namespace Pipes.Properties
         internal static System.Drawing.Bitmap NorthEastPipe {
             get {
                 object obj = ResourceManager.GetObject("NorthEastPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NorthSpiltter {
+            get {
+                object obj = ResourceManager.GetObject("NorthSpiltter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NorthWestPipe {
+            get {
+                object obj = ResourceManager.GetObject("NorthWestPipe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -272,9 +283,9 @@ namespace Pipes.Properties
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap splitterEast {
+        internal static System.Drawing.Bitmap SouthEastPipe {
             get {
-                object obj = ResourceManager.GetObject("splitterEast", resourceCulture);
+                object obj = ResourceManager.GetObject("SouthEastPipe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -282,29 +293,9 @@ namespace Pipes.Properties
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap splitterNorth {
+        internal static System.Drawing.Bitmap SouthSpiltter {
             get {
-                object obj = ResourceManager.GetObject("splitterNorth", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap splitterSouth {
-            get {
-                object obj = ResourceManager.GetObject("splitterSouth", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap splitterWest {
-            get {
-                object obj = ResourceManager.GetObject("splitterWest", resourceCulture);
+                object obj = ResourceManager.GetObject("SouthSpiltter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -332,9 +323,9 @@ namespace Pipes.Properties
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WestNorthPipe {
+        internal static System.Drawing.Bitmap WestSouthPipe {
             get {
-                object obj = ResourceManager.GetObject("WestNorthPipe", resourceCulture);
+                object obj = ResourceManager.GetObject("WestSouthPipe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -342,13 +333,11 @@ namespace Pipes.Properties
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WestSouthPipe {
+        internal static System.Drawing.Bitmap WestSpiltter {
             get {
-                object obj = ResourceManager.GetObject("WestSouthPipe", resourceCulture);
+                object obj = ResourceManager.GetObject("WestSpiltter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-=======
->>>>>>> parent of 235ee0e... added draw methods in grid
     }
 }
