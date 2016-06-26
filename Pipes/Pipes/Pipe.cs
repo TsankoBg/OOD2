@@ -10,8 +10,8 @@ namespace Pipes
     class Pipe : Component
     {
         // a pipe has an input and an output
-       public Component InputA { get; set; }
-       public Component OutputA { get; set; }
+        Component InputA { get; set; }
+        Component OutputA { get; set; }
 
         private int safetyLimit;
         private int SafetyLimit
@@ -55,6 +55,15 @@ namespace Pipes
         public override void AttachComponent(Component current)
         {
             OutputA = current;
+        }
+        public int checkSystemFlow()
+        {
+            return 0;
+            //If false
+            return 1;
+            //return if true
+            return -1;
+            //return if system not complete
         }
     }
 }

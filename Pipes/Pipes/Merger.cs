@@ -13,7 +13,7 @@ namespace Pipes
 
         Component inPutA { get; set; }
         Component inPutB { get; set; }
-        public Component OutputA { get; set; }
+        Component OutputA { get; set; }
 
 
         // connstructor
