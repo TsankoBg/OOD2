@@ -70,15 +70,17 @@ namespace Pipes
         {
             if (component != null)
             {
-                lines = 15;
-                drawGrid(lines);
-                return false;
-            }
-            else
-            {
-                lines++;
-                drawGrid(lines);
-                return true;
+                Image img;
+                int x = Convert.ToInt32(component.location.X * xSpace);
+                int y = Convert.ToInt32(component.location.Y * ySpace);
+                int w = Convert.ToInt32(xSpace);
+                int h = Convert.ToInt32(ySpace);
+
+                Rectangle rect = new Rectangle(x, y, w, h);
+                if (getImage(component, out img) == true)
+                {
+                    graphic.DrawImage(img, rect);
+                }
             }
 
 
