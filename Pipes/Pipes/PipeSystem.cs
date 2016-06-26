@@ -96,6 +96,9 @@ namespace Pipes
         {
             Component componentToRemove;
             //componentToRemove just an example 
+            PointP p = new PointP(1, 1);
+            Component splitter = new Splitter(p);
+            grid.unDrawComponent(splitter, graphic);
             grid.unDrawComponent(componentToRemove, graphic);
             //then delete the component
             return true;
