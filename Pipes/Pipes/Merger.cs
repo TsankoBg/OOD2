@@ -11,8 +11,8 @@ namespace Pipes
     {
         
 
-        Component inPutA { get; set; }
-        Component inPutB { get; set; }
+        Component InputA { get; set; }
+        Component InputB { get; set; }
         public Component OutputA { get; set; }
 
 
@@ -24,7 +24,7 @@ namespace Pipes
 
         public override void SetFlow(int x)
         {
-             Flow = inPutA.Flow + inPutB.Flow;
+             Flow = InputA.Flow + InputB.Flow;
             
             if (OutputA != null) OutputA.SetFlow(Flow);
         }

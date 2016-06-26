@@ -212,7 +212,7 @@ namespace Pipes
                     using (Graphics g = GridPanel.CreateGraphics())
                     {
                         
-                        system.removePipes(g);
+                        system.removePipes(c,g);
                     }
                 }
             }
@@ -226,7 +226,7 @@ namespace Pipes
                 if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
                 {
                     // parameter neeed to be assignet 
-                    system.MOdifyComponent(23);
+                    //system.MOdifyComponent(23);
                 }
             }
         }

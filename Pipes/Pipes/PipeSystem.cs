@@ -88,15 +88,23 @@ namespace Pipes
             }
            
         }
+
+
         /// <summary>
         /// removes the pipe
         /// </summary>
         /// <returns></returns>
-        public bool removePipes(Graphics graphic)
+        public bool removePipes(Component c, Graphics graphic)
         {
-            Component componentToRemove;
-            //componentToRemove just an example 
-            grid.unDrawComponent(componentToRemove, graphic);
+
+            //componentToRemove just an example
+            Components.Remove(c); 
+            grid.unDrawComponent(c, graphic);
+
+            //if ((c is Pump) || (c is Pipe) || (c is Splitter) || (c is Merger))
+            //{
+            //    if (c)
+            //}
             //then delete the component
             return true;
         }
