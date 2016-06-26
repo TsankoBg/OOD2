@@ -212,7 +212,7 @@ namespace Pipes
                     using (Graphics g = GridPanel.CreateGraphics())
                     {
                         
-                        system.removePipes(g);
+                        system.removePipes(c,g);
                     }
                 }
             }
@@ -226,7 +226,7 @@ namespace Pipes
                 if (c.location.X == MousePosition.X & c.location.Y == MousePosition.Y)
                 {
                     // parameter neeed to be assignet 
-                    system.MOdifyComponent(23);
+                    system.MOdifyComponent(c);
                 }
             }
         }
@@ -308,6 +308,46 @@ namespace Pipes
         }
 
         private void contextMenuStrip1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int flow = Convert.ToInt32(textBox1.Text);
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == position.X & c.location.Y == position.Y)
+                {
+                    
+                      c.SetFlow(flow);
+                    
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PointP position = new PointP();
+            Point point = GridPanel.PointToClient(Cursor.Position);
+            //mouse position is relative to panel 
+            position = system.grid.returnMousePosition(point);
+            foreach (Component c in system.Components)
+            {
+                // checks if  a component with the current location exists
+                if (c.location.X == position.X & c.location.Y == position.Y)
+                {
+                    label2.Text = c.Flow.ToString();
+                }
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
