@@ -24,3 +24,5 @@ C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.csprojResolveAssemb
 C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.Form1.resources
 C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.Properties.Resources.resources
 C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.csproj.GenerateResource.Cache
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.pdb

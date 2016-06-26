@@ -415,8 +415,14 @@ namespace Pipes
                 {
                     using (Graphics g = GridPanel.CreateGraphics())
                     {
-
-                        system.removeComponent(c, g);
+                        if ((c is Pump)||(c is Sink)||(c is Merger)||(c is Splitter))
+                        {
+                            system.removeComponent(c, g);
+                        }
+                        else if (c is Pipe)
+                        {
+                            system.removePipes(c, g);
+                        }
                     }
                 }
             }
