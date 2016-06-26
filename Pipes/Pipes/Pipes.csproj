@@ -92,7 +92,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <None Include="Properties\pump.png" />
   </ItemGroup>
@@ -189,8 +188,6 @@
   <ItemGroup>
     <None Include="Resources\GreenHorizontalPipe.png" />
   </ItemGroup>
-=======
->>>>>>> parent of 235ee0e... added draw methods in grid
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
