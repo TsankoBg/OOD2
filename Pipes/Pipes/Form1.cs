@@ -442,5 +442,10 @@ namespace Pipes
                 }
             }
         }
+
+        private void GridPanel_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

@@ -206,6 +206,7 @@
             this.GridPanel.TabIndex = 1;
             this.GridPanel.Click += new System.EventHandler(this.GridPanel_Click);
             this.GridPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.GridPanel_Paint);
+            this.GridPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GridPanel_MouseClick);
             // 
             // contextMenuStrip1
             // 
