@@ -101,7 +101,7 @@ namespace Pipes
             {
                 x++;
                 // checks if  a component with the current location exists
-                if (c.location.X == position.X && c.location.Y == position.Y)
+                if (c.location.X == p.X && c.location.Y == p.Y)
                 {
                     system.index = x;
                     //system.selectedComponent = c;

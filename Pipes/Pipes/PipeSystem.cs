@@ -153,14 +153,14 @@ namespace Pipes
             }
             Components.Remove(c);
             //componentToRemove just an example 
-<<<<<<< HEAD
+//<<<<<<< HEAD
             PointP p = new PointP(1, 1);
             Component splitter = new Splitter(p);
             grid.unDrawComponent(splitter, graphic);
-            grid.unDrawComponent(componentToRemove, graphic);
-=======
             grid.unDrawComponent(c, graphic);
->>>>>>> origin/master
+//=======
+            grid.unDrawComponent(c, graphic);
+//>>>>>>> origin/master
             //then delete the component
             //return true;
         }
