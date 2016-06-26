@@ -282,7 +282,7 @@ namespace Pipes
                 else if (component is Splitter)
                 {
                     PointP previous = new PointP();
-                    previous = ((Splitter)component).inPutA.location;
+                  //  previous = ((Splitter)component).InputA.location;
 
                     PointP test = new PointP();
                     test = component.location;
@@ -315,7 +315,7 @@ namespace Pipes
                     PointP next = new PointP();
                     if (((Merger)component).location != null)
                     {
-                        next = ((Merger)component).OutputA.location;
+                     //   next = ((Merger)component).OutputA.location;
                         PointP test = new PointP(component.location);
 
                         test.X = component.location.X + 1;

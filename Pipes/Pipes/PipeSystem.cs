@@ -14,6 +14,7 @@ namespace Pipes
         private int currentYsize = 10;
         private bool alterSinceSave = false;
         public Component selectedComponent;
+        public int index;
         public List<Component> Components;
         public SaveLoad saveload;
         public Grid grid;
@@ -92,16 +93,76 @@ namespace Pipes
         /// removes the pipe
         /// </summary>
         /// <returns></returns>
-        public bool removePipes(Graphics graphic)
+        public void removeComponent(Component c,Graphics graphic)
         {
-            Component componentToRemove;
+            if (c is Pump) 
+            {
+                if (((Pump)c).OutputA != null)
+                {
+                    removePipes(((Pump)c).OutputA, graphic);
+                }
+            }
+            if (c is Sink)
+            {
+                if (((Sink)c).InputA != null)
+                {
+                    removePipes(((Sink)c).InputA, graphic);
+                }
+            }
+            if (c is Merger)
+            {
+                if (((Merger)c).OutputA != null)
+                {
+                    removePipes(((Merger)c).OutputA, graphic);
+                }
+                if (((Merger)c).InputA != null)
+                {
+                    removePipes(((Merger)c).InputA, graphic);
+                }
+                if (((Merger)c).InputB != null)
+                {
+                    removePipes(((Merger)c).InputB, graphic);
+                }
+            }
+            if (c is Splitter)
+            {
+                if (((Splitter)c).InputA != null)
+                {
+                    removePipes(((Splitter)c).InputA, graphic);
+                }
+                if (((Splitter)c).OutputA != null)
+                {
+                    removePipes(((Splitter)c).OutputA, graphic);
+                }
+                if (((Splitter)c).OutputB != null)
+                {
+                    removePipes(((Splitter)c).OutputB, graphic);
+                }
+            }
+            Components.Remove(c);
             //componentToRemove just an example 
+            grid.unDrawComponent(c, graphic);
+            //then delete the component
+            //return true;
+        }
+        public void removePipes(Component c, Graphics graphic)
+        {
+            //if ((c is Pump) || (c)
+            {
+
+            }
+            Components.Remove(c);
+            //componentToRemove just an example 
+<<<<<<< HEAD
             PointP p = new PointP(1, 1);
             Component splitter = new Splitter(p);
             grid.unDrawComponent(splitter, graphic);
             grid.unDrawComponent(componentToRemove, graphic);
+=======
+            grid.unDrawComponent(c, graphic);
+>>>>>>> origin/master
             //then delete the component
-            return true;
+            //return true;
         }
         /// <summary>
         /// 

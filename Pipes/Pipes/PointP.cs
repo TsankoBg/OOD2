@@ -34,5 +34,15 @@ namespace Pipes
             this.X = x;
             this.Y = y;
         }
+        public bool CheckCordinates(PointP tocheck)
+        {
+            if(tocheck.X==X && tocheck.Y==Y)
+            {
+                return true;
+            }
+
+
+            return false;
+        }
     }
 }

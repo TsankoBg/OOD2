@@ -9,7 +9,7 @@ namespace Pipes
 {
     class Pump : Component
     {
-        Component OutputA;
+        public Component OutputA;
         //private int flow;
         private int maxFlow;
 
@@ -46,7 +46,7 @@ namespace Pipes
         public override void SetFlow(int x)
         {
             this.Flow = x;
-            if (OutputA!=null) OutputA.SetFlow(Flow);
+            if (OutputA != null) OutputA.SetFlow(Flow);
         }
         /// <summary>
         /// Sets the maxFlow  to the given value
@@ -57,5 +57,14 @@ namespace Pipes
             this.MaxFlow = x;
         }
 
+        public override void attachOutputA(Component x)
+        {
+            if ((x is Pipe) && (((Pipe)x).InputA == null))
+            {
+                this.OutputA = x;
+                ((Pipe)x).InputA = this;
+            }
+
+        }
     }
 }

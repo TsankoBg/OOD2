@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ToolPanel = new System.Windows.Forms.Panel();
+            this.btnAddFlow = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.BtnSink = new System.Windows.Forms.Button();
             this.BtnPump = new System.Windows.Forms.Button();
             this.BtnMerger = new System.Windows.Forms.Button();
@@ -46,6 +48,10 @@
             this.RightClickOutputB = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickChange = new System.Windows.Forms.ToolStripMenuItem();
             this.RightClickDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.showflow = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.ToolPanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +59,8 @@
             // ToolPanel
             // 
             this.ToolPanel.BackColor = System.Drawing.Color.MintCream;
+            this.ToolPanel.Controls.Add(this.btnAddFlow);
+            this.ToolPanel.Controls.Add(this.textBox1);
             this.ToolPanel.Controls.Add(this.BtnSink);
             this.ToolPanel.Controls.Add(this.BtnPump);
             this.ToolPanel.Controls.Add(this.BtnMerger);
@@ -61,12 +69,34 @@
             this.ToolPanel.Controls.Add(this.SaveButton);
             this.ToolPanel.Controls.Add(this.LoadButton);
             this.ToolPanel.Location = new System.Drawing.Point(6, 13);
-            this.ToolPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ToolPanel.Margin = new System.Windows.Forms.Padding(1);
             this.ToolPanel.MaximumSize = new System.Drawing.Size(80, 253);
             this.ToolPanel.MinimumSize = new System.Drawing.Size(80, 253);
             this.ToolPanel.Name = "ToolPanel";
             this.ToolPanel.Size = new System.Drawing.Size(80, 253);
             this.ToolPanel.TabIndex = 0;
+            // 
+            // btnAddFlow
+            // 
+            this.btnAddFlow.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAddFlow.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnAddFlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddFlow.Location = new System.Drawing.Point(0, 148);
+            this.btnAddFlow.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAddFlow.Name = "btnAddFlow";
+            this.btnAddFlow.Size = new System.Drawing.Size(77, 21);
+            this.btnAddFlow.TabIndex = 8;
+            this.btnAddFlow.Text = "Set Flow";
+            this.btnAddFlow.UseVisualStyleBackColor = false;
+            this.btnAddFlow.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 173);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(49, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // BtnSink
             // 
@@ -74,7 +104,7 @@
             this.BtnSink.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnSink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSink.Location = new System.Drawing.Point(2, 116);
-            this.BtnSink.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtnSink.Margin = new System.Windows.Forms.Padding(1);
             this.BtnSink.Name = "BtnSink";
             this.BtnSink.Size = new System.Drawing.Size(77, 21);
             this.BtnSink.TabIndex = 6;
@@ -88,7 +118,7 @@
             this.BtnPump.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnPump.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPump.Location = new System.Drawing.Point(2, 94);
-            this.BtnPump.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtnPump.Margin = new System.Windows.Forms.Padding(1);
             this.BtnPump.Name = "BtnPump";
             this.BtnPump.Size = new System.Drawing.Size(77, 21);
             this.BtnPump.TabIndex = 5;
@@ -102,7 +132,7 @@
             this.BtnMerger.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnMerger.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMerger.Location = new System.Drawing.Point(2, 70);
-            this.BtnMerger.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtnMerger.Margin = new System.Windows.Forms.Padding(1);
             this.BtnMerger.Name = "BtnMerger";
             this.BtnMerger.Size = new System.Drawing.Size(77, 21);
             this.BtnMerger.TabIndex = 4;
@@ -116,7 +146,7 @@
             this.BtnSplitter.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnSplitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSplitter.Location = new System.Drawing.Point(1, 47);
-            this.BtnSplitter.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtnSplitter.Margin = new System.Windows.Forms.Padding(1);
             this.BtnSplitter.Name = "BtnSplitter";
             this.BtnSplitter.Size = new System.Drawing.Size(77, 21);
             this.BtnSplitter.TabIndex = 3;
@@ -130,7 +160,7 @@
             this.BtnAddpipe.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnAddpipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAddpipe.Location = new System.Drawing.Point(1, 23);
-            this.BtnAddpipe.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BtnAddpipe.Margin = new System.Windows.Forms.Padding(1);
             this.BtnAddpipe.Name = "BtnAddpipe";
             this.BtnAddpipe.Size = new System.Drawing.Size(77, 21);
             this.BtnAddpipe.TabIndex = 2;
@@ -144,7 +174,7 @@
             this.SaveButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveButton.Location = new System.Drawing.Point(2, 208);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(1);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(115, 32);
             this.SaveButton.TabIndex = 1;
@@ -158,7 +188,7 @@
             this.LoadButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.LoadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadButton.Location = new System.Drawing.Point(2, 231);
-            this.LoadButton.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.LoadButton.Margin = new System.Windows.Forms.Padding(1);
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(115, 32);
             this.LoadButton.TabIndex = 0;
@@ -170,12 +200,13 @@
             // 
             this.GridPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.GridPanel.Location = new System.Drawing.Point(95, 13);
-            this.GridPanel.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.GridPanel.Margin = new System.Windows.Forms.Padding(1);
             this.GridPanel.Name = "GridPanel";
             this.GridPanel.Size = new System.Drawing.Size(400, 390);
             this.GridPanel.TabIndex = 1;
             this.GridPanel.Click += new System.EventHandler(this.GridPanel_Click);
             this.GridPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.GridPanel_Paint);
+            this.GridPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GridPanel_MouseClick);
             // 
             // contextMenuStrip1
             // 
@@ -188,7 +219,7 @@
             this.RightClickChange,
             this.RightClickDelete});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 158);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(146, 136);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             this.contextMenuStrip1.Opened += new System.EventHandler(this.contextMenuStrip1_Opened);
             this.contextMenuStrip1.Click += new System.EventHandler(this.contextMenuStrip1_Click);
@@ -196,42 +227,81 @@
             // RightClickInputA
             // 
             this.RightClickInputA.Name = "RightClickInputA";
-            this.RightClickInputA.Size = new System.Drawing.Size(152, 22);
+            this.RightClickInputA.Size = new System.Drawing.Size(145, 22);
             this.RightClickInputA.Text = "Add InputA";
-            this.RightClickInputA.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.RightClickInputA.Click += new System.EventHandler(this.RightClickInputA_Click);
             // 
             // RightClickInputB
             // 
             this.RightClickInputB.Name = "RightClickInputB";
-            this.RightClickInputB.Size = new System.Drawing.Size(152, 22);
+            this.RightClickInputB.Size = new System.Drawing.Size(145, 22);
             this.RightClickInputB.Text = "Add Input B";
-            this.RightClickInputB.Click += new System.EventHandler(this.addOutputAToolStripMenuItem_Click);
+            this.RightClickInputB.Click += new System.EventHandler(this.RightClickInputB_Click);
             // 
             // RightClickOutputA
             // 
             this.RightClickOutputA.Name = "RightClickOutputA";
-            this.RightClickOutputA.Size = new System.Drawing.Size(152, 22);
+            this.RightClickOutputA.Size = new System.Drawing.Size(145, 22);
             this.RightClickOutputA.Text = "Add OutputA";
+            this.RightClickOutputA.Click += new System.EventHandler(this.RightClickOutputA_Click);
             // 
             // RightClickOutputB
             // 
             this.RightClickOutputB.Name = "RightClickOutputB";
-            this.RightClickOutputB.Size = new System.Drawing.Size(152, 22);
+            this.RightClickOutputB.Size = new System.Drawing.Size(145, 22);
             this.RightClickOutputB.Text = "Add OutPutB";
+            this.RightClickOutputB.Click += new System.EventHandler(this.RightClickOutputB_Click);
             // 
             // RightClickChange
             // 
             this.RightClickChange.Name = "RightClickChange";
-            this.RightClickChange.Size = new System.Drawing.Size(152, 22);
+            this.RightClickChange.Size = new System.Drawing.Size(145, 22);
             this.RightClickChange.Text = "Change";
             this.RightClickChange.Click += new System.EventHandler(this.RightClickChange_Click);
             // 
             // RightClickDelete
             // 
             this.RightClickDelete.Name = "RightClickDelete";
-            this.RightClickDelete.Size = new System.Drawing.Size(152, 22);
+            this.RightClickDelete.Size = new System.Drawing.Size(145, 22);
             this.RightClickDelete.Text = "Delete";
             this.RightClickDelete.Click += new System.EventHandler(this.RightClickDelete_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(27, 329);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 2;
+            // 
+            // showflow
+            // 
+            this.showflow.Location = new System.Drawing.Point(7, 292);
+            this.showflow.Name = "showflow";
+            this.showflow.Size = new System.Drawing.Size(75, 23);
+            this.showflow.TabIndex = 3;
+            this.showflow.Text = "Show flow:";
+            this.showflow.UseVisualStyleBackColor = true;
+            this.showflow.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 329);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "label2";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 360);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "SafetyLimit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
@@ -239,6 +309,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 443);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.showflow);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.GridPanel);
             this.Controls.Add(this.ToolPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -251,8 +325,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ToolPanel.ResumeLayout(false);
+            this.ToolPanel.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -274,6 +350,12 @@
         private System.Windows.Forms.Button BtnMerger;
         private System.Windows.Forms.Button BtnSink;
         private System.Windows.Forms.Button BtnPump;
+        private System.Windows.Forms.Button btnAddFlow;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button showflow;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

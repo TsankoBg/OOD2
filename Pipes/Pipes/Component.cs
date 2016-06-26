@@ -56,20 +56,36 @@ namespace Pipes
         //    return -1;
         //}
 
-        public virtual void AttachComponent(Component current)
-        {
+        
+        //public bool RemoveComponent()
+        //{
 
-         
-        }
-        public bool RemovePipes()
-        {
+        //    return false;
 
-
-
-            return false;
-
-        }
+        //}
         public virtual void SetFlow(int x)
+        {
+
+        }
+
+        public virtual void SetSafetyLimit(int x)
+        {
+
+        }
+
+        public virtual void attachInputA(Component x)
+        {
+
+        }
+        public virtual void attachInputB(Component x)
+        {
+
+        }
+        public virtual void attachOutputA(Component x)
+        {
+
+        }
+        public virtual void attachOutputB(Component x)
         {
 
         }
