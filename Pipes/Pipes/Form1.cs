@@ -375,7 +375,7 @@ namespace Pipes
                     using (Graphics g = GridPanel.CreateGraphics())
                     {
 
-                        system.removePipes(c, g);
+                        system.removeComponent(c, g);
                     }
                 }
             }

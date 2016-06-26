@@ -57,12 +57,12 @@ namespace Pipes
         //}
 
         
-        public bool RemovePipes()
-        {
+        //public bool RemoveComponent()
+        //{
 
-            return false;
+        //    return false;
 
-        }
+        //}
         public virtual void SetFlow(int x)
         {
 

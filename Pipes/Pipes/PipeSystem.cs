@@ -92,7 +92,7 @@ namespace Pipes
         /// removes the pipe
         /// </summary>
         /// <returns></returns>
-        public bool removePipes(Component c,Graphics graphic)
+        public bool removeComponent(Component c,Graphics graphic)
         {
             Components.Remove(c);
             //componentToRemove just an example 
