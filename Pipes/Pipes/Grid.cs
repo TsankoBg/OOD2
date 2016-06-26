@@ -123,7 +123,7 @@ namespace Pipes
                         test2 = component.location;
                         test.X = component.location.X - 1;
                         test2.X = component.location.X + 1;
-                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        if (((previous.CheckCordinates(test)) && (next.CheckCordinates(test2))) || ((previous.CheckCordinates(test2)) && (next.CheckCordinates(test))))
                         {
                             //Is horizontal Pipe
                             switch (((Pipe)component).checkSystemFlow())
@@ -144,7 +144,7 @@ namespace Pipes
                         test2 = component.location;
                         test.Y = component.location.Y - 1;
                         test2.Y = component.location.Y + 1;
-                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        if (((previous.CheckCordinates(test)) && (next.CheckCordinates(test2))) || ((previous.CheckCordinates(test2)) && (next.CheckCordinates(test))))
                         {
                             switch (((Pipe)component).checkSystemFlow())
                             {
@@ -165,7 +165,7 @@ namespace Pipes
                         test2 = component.location;
                         test.X = component.location.X - 1;
                         test2.Y = component.location.Y + 1;
-                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        if (((previous.CheckCordinates(test)) && (next.CheckCordinates(test2))) || ((previous.CheckCordinates(test2)) && (next.CheckCordinates(test))))
                         {
                             switch (((Pipe)component).checkSystemFlow())
                             {
@@ -185,7 +185,7 @@ namespace Pipes
                         test2 = component.location;
                         test.X = component.location.X - 1;
                         test2.Y = component.location.Y - 1;
-                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        if (((previous.CheckCordinates(test)) && (next.CheckCordinates(test2))) || ((previous.CheckCordinates(test2)) && (next.CheckCordinates(test))))
                         {
 
                             switch (((Pipe)component).checkSystemFlow())
@@ -206,7 +206,7 @@ namespace Pipes
                         test2 = component.location;
                         test.X = component.location.X + 1;
                         test2.Y = component.location.Y - 1;
-                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        if (((previous.CheckCordinates(test)) && (next.CheckCordinates(test2))) || ((previous.CheckCordinates(test2)) && (next.CheckCordinates(test))))
                         {
                             switch (((Pipe)component).checkSystemFlow())
                             {
@@ -226,7 +226,7 @@ namespace Pipes
                         test2 = component.location;
                         test.X = component.location.X + 1;
                         test2.Y = component.location.Y + 1;
-                        if (((previous == test) && (next == test2)) || ((previous == test2) && (next == test)))
+                        if (((previous.CheckCordinates(test)) && (next.CheckCordinates(test2))) || ((previous.CheckCordinates(test2)) && (next.CheckCordinates(test))))
                         {
                             switch (((Pipe)component).checkSystemFlow())
                             {
@@ -253,7 +253,7 @@ namespace Pipes
                         test2 = component.location;
                         test.Y = component.location.Y - 1;
                         test2.Y = component.location.Y + 1;
-                        if ((previous == test) || (previous == test2))
+                        if ((previous.CheckCordinates(test)) || (previous.CheckCordinates(test2)))
                         {
                             //test vertical
                             img = Pipes.Properties.Resources.VerticalPipe;
@@ -263,7 +263,7 @@ namespace Pipes
                         test2 = component.location;
                         test.X = component.location.X - 1;
                         test2.X = component.location.X + 1;
-                        if ((previous == test) || (previous == test2))
+                        if ((previous.CheckCordinates(test)) || (previous.CheckCordinates(test2)))
                         {
                             //test horizontal
                             img = Pipes.Properties.Resources.HorizontalPipe;
@@ -287,21 +287,21 @@ namespace Pipes
                     PointP test = new PointP();
                     test = component.location;
                     test.X = component.location.X + 1;
-                    if (test == previous)
+                    if (test.CheckCordinates(previous))
                     {
                         img = Pipes.Properties.Resources.EastSpiltter;
                         return true;
                     }
                     test = component.location;
                     test.Y = component.location.Y - 1;
-                    if (test == previous)
+                    if (test.CheckCordinates(previous))
                     {
                         img = Pipes.Properties.Resources.NorthSpiltter;
                         return true;
                     }
                     test = component.location;
                     test.Y = component.location.Y + 1;
-                    if (test == previous)
+                    if (test.CheckCordinates(previous))
                     {
                         img = Pipes.Properties.Resources.SouthSpiltter;
                         return true;
@@ -319,19 +319,19 @@ namespace Pipes
                         PointP test = new PointP(component.location);
 
                         test.X = component.location.X + 1;
-                        if (test == next)
+                        if (test.CheckCordinates(next))
                         {
                             img = Pipes.Properties.Resources.MergerEast;
                             return true;
                         }
                         test.Y = component.location.Y - 1;
-                        if (test == next)
+                        if (test.CheckCordinates(next))
                         {
                             img = Pipes.Properties.Resources.MergerNorthpng;
                             return true;
                         }
                         test.X = component.location.X + 1;
-                        if (test == next)
+                        if (test.CheckCordinates(next))
                         {
                             img = Pipes.Properties.Resources.MergerSouth;
                             return true;
