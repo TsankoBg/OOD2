@@ -153,6 +153,42 @@
   <ItemGroup>
     <None Include="Properties\splitterWest.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verticalRedPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedWestSouthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedEastSouthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedWestNorthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedNorthEastPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedHorizontalPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenVerticalPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenWestSouthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenEastSouthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenWestNorthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenEastNorthPipe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenHorizontalPipe.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

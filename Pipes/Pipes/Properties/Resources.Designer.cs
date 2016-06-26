@@ -73,6 +73,66 @@ namespace Pipes.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GreenEastNorthPipe {
+            get {
+                object obj = ResourceManager.GetObject("GreenEastNorthPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GreenEastSouthPipe {
+            get {
+                object obj = ResourceManager.GetObject("GreenEastSouthPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GreenHorizontalPipe {
+            get {
+                object obj = ResourceManager.GetObject("GreenHorizontalPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GreenVerticalPipe {
+            get {
+                object obj = ResourceManager.GetObject("GreenVerticalPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GreenWestNorthPipe {
+            get {
+                object obj = ResourceManager.GetObject("GreenWestNorthPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GreenWestSouthPipe {
+            get {
+                object obj = ResourceManager.GetObject("GreenWestSouthPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HorizontalPipe {
             get {
                 object obj = ResourceManager.GetObject("HorizontalPipe", resourceCulture);
@@ -143,6 +203,56 @@ namespace Pipes.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RedEastSouthPipe {
+            get {
+                object obj = ResourceManager.GetObject("RedEastSouthPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RedHorizontalPipe {
+            get {
+                object obj = ResourceManager.GetObject("RedHorizontalPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RedNorthEastPipe {
+            get {
+                object obj = ResourceManager.GetObject("RedNorthEastPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RedWestNorthPipe {
+            get {
+                object obj = ResourceManager.GetObject("RedWestNorthPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RedWestSouthPipe {
+            get {
+                object obj = ResourceManager.GetObject("RedWestSouthPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sink {
             get {
                 object obj = ResourceManager.GetObject("sink", resourceCulture);
@@ -196,6 +306,16 @@ namespace Pipes.Properties {
         internal static System.Drawing.Bitmap VerticalPipe {
             get {
                 object obj = ResourceManager.GetObject("VerticalPipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verticalRedPipe {
+            get {
+                object obj = ResourceManager.GetObject("verticalRedPipe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

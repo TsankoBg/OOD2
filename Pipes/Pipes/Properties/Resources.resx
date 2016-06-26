@@ -166,4 +166,40 @@
   <data name="WestSouthPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>WestSouthPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GreenEastNorthPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenEastNorthPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenEastSouthPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenEastSouthPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenHorizontalPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenHorizontalPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenVerticalPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenVerticalPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenWestNorthPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenWestNorthPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenWestSouthPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenWestSouthPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedEastSouthPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedEastSouthPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedHorizontalPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedHorizontalPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedNorthEastPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedNorthEastPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedWestNorthPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedWestNorthPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedWestSouthPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedWestSouthPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="verticalRedPipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\verticalRedPipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
