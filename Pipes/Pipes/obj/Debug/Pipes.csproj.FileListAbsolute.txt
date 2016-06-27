@@ -29,3 +29,5 @@ C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.pdb
 C:\Users\Dyer\Documents\OOD2\OOD2\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe.config
 C:\Users\Dyer\Documents\OOD2\OOD2\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.exe
 C:\Users\Dyer\Documents\OOD2\OOD2\OOD2\OOD2\Pipes\Pipes\obj\Debug\Pipes.pdb
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe.CodeAnalysisLog.xml
+C:\Users\zdami\Desktop\OOD2\OOD2\Pipes\Pipes\bin\Debug\Pipes.exe.lastcodeanalysissucceeded
