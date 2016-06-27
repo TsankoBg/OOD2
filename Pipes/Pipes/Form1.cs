@@ -249,21 +249,30 @@ namespace Pipes
         }
 
         private void GridPanel_Click(object sender, EventArgs e)
+            /*
+            This changes how the click even works according to the context menu selection. It looks correct,
+            but for some reason takes in the wrong coordinates, and I can't figure out why.
+            */
         {
-            //When Clicked in the Panel selectedComponent will be selected based on grid space
-            PointP position = new PointP();
-            Point point = GridPanel.PointToClient(Cursor.Position);
-            //mouse position is relative to panel 
-            p = system.grid.returnMousePosition(point);
+            
 
             switch (selector)
             {
                 case Selection.Add:
                     {
-                       return;
+                        //When Clicked in the Panel selectedComponent will be selected based on grid space
+                        PointP position = new PointP();
+                        Point point = GridPanel.PointToClient(Cursor.Position);
+                        //mouse position is relative to panel 
+                        p = system.grid.returnMousePosition(point);
+                        return;
                     }
                 case Selection.InputA:
                     {
+                        PointP position = new PointP();
+                        Point point = GridPanel.PointToClient(Cursor.Position);
+                        //mouse position is relative to panel 
+                        p = system.grid.returnMousePosition(point);
                         foreach (Component c in system.Components)
                         {
                             // checks if  a component with the current location exists
@@ -280,6 +289,11 @@ namespace Pipes
                     
                 case Selection.InputB:
                     {
+                        //When Clicked in the Panel selectedComponent will be selected based on grid space
+                        PointP position = new PointP();
+                        Point point = GridPanel.PointToClient(Cursor.Position);
+                        //mouse position is relative to panel 
+                        p = system.grid.returnMousePosition(point);
                         foreach (Component c in system.Components)
                         {
                             // checks if  a component with the current location exists
@@ -295,6 +309,11 @@ namespace Pipes
                     }
                 case Selection.OutputA:
                     {
+                        //When Clicked in the Panel selectedComponent will be selected based on grid space
+                        PointP position = new PointP();
+                        Point point = GridPanel.PointToClient(Cursor.Position);
+                        //mouse position is relative to panel 
+                        p = system.grid.returnMousePosition(point);
                         foreach (Component c in system.Components)
                         {
                             // checks if  a component with the current location exists
@@ -310,6 +329,11 @@ namespace Pipes
                     }
                 case Selection.OutputB:
                     {
+                        //When Clicked in the Panel selectedComponent will be selected based on grid space
+                        PointP position = new PointP();
+                        Point point = GridPanel.PointToClient(Cursor.Position);
+                        //mouse position is relative to panel 
+                        p = system.grid.returnMousePosition(point);
                         foreach (Component c in system.Components)
                         {
                             // checks if  a component with the current location exists
