@@ -276,7 +276,7 @@ namespace Pipes
                         foreach (Component c in system.Components)
                         {
                             // checks if  a component with the current location exists
-                            if (c.location.X == position.X && c.location.Y == position.Y)
+                            if (c.location.X == p.X && c.location.Y == p.Y)
                             {
                                 // parameter neeed to be assignet 
                                 system.Components[system.index].attachInputA(c);
@@ -297,7 +297,7 @@ namespace Pipes
                         foreach (Component c in system.Components)
                         {
                             // checks if  a component with the current location exists
-                            if (c.location.X == position.X && c.location.Y == position.Y)
+                            if (c.location.X == p.X && c.location.Y == p.Y)
                             {
                                 // parameter neeed to be assignet 
                                 system.Components[system.index].attachInputB(c);
@@ -317,7 +317,7 @@ namespace Pipes
                         foreach (Component c in system.Components)
                         {
                             // checks if  a component with the current location exists
-                            if (c.location.X == position.X && c.location.Y == position.Y)
+                            if (c.location.X == p.X && c.location.Y == p.Y)
                             {
                                 // parameter neeed to be assignet 
                                 system.Components[system.index].attachOutputA(c);
@@ -337,7 +337,7 @@ namespace Pipes
                         foreach (Component c in system.Components)
                         {
                             // checks if  a component with the current location exists
-                            if (c.location.X == position.X && c.location.Y == position.Y)
+                            if (c.location.X == p.X && c.location.Y == p.Y)
                             {
                                 // parameter neeed to be assignet 
                                 system.Components[system.index].attachOutputB(c);
@@ -428,7 +428,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == position.X && c.location.Y == position.Y)
+                if (c.location.X == p.X && c.location.Y == p.Y)
                 {
                     // parameter neeed to be assignet 
                     //selectedComponent = c;
@@ -446,7 +446,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == position.X && c.location.Y == position.Y)
+                if (c.location.X == p.X && c.location.Y == p.Y)
                 {
                     // parameter neeed to be assignet 
                     selector = Selection.OutputB;
@@ -462,7 +462,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == position.X && c.location.Y == position.Y)
+                if (c.location.X == p.X && c.location.Y == p.Y)
                 {
                     // parameter neeed to be assignet 
                     selector = Selection.InputB;
@@ -479,7 +479,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == position.X && c.location.Y == position.Y)
+                if (c.location.X == p.X && c.location.Y == p.Y)
                 {
                     //Point b = new Point()
                     // parameter neeed to be assignet 
@@ -493,7 +493,7 @@ namespace Pipes
             foreach (Component c in system.Components)
             {
                 // checks if  a component with the current location exists
-                if (c.location.X == MousePosition.X && c.location.Y == MousePosition.Y)
+                if (c.location.X == p.X && c.location.Y == p.Y)
                 {
                     // parameter neeed to be assignet 
                     system.MOdifyComponent(c);
