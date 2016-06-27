@@ -140,16 +140,26 @@ namespace Pipes
                 }
             }
             Components.Remove(c);
-            //componentToRemove just an example 
+            
             grid.unDrawComponent(c, graphic);
             //then delete the component
             //return true;
         }
         public void removePipes(Component c, Graphics graphic)
         {
-            //if ((c is Pump) || (c)
+            
             {
-
+                if ((((Pipe)c).InputA != null) && (((Pipe)c).InputA is Pipe))
+                {
+                    removePipes(((Pipe)c).InputA, graphic);
+                }
+                if ((((Pipe)c).OutputA != null) && (((Pipe)c).OutputA is Pipe))
+                {
+                    removePipes(((Pipe)c).OutputA, graphic);
+                }
+                Components.Remove(c);
+               
+                grid.unDrawComponent(c, graphic);
             }
             Components.Remove(c);
             //componentToRemove just an example 
